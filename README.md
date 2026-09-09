@@ -132,3 +132,5 @@ python -m unittest discover -s tests -v
 
 检查高高度相位对 100 位直接计算、精确基底加偏移、越过临界线的浮点拒绝、真实/合成零点计数、选窗并列和缺额、冻结源码损坏拒绝。
 GitHub Actions 在 Ubuntu / Python 3.12 执行这些检查、完整 CPU 校准批次与完成后续跑；结果以仓库 Actions 页面为准。
+
+本次本机 CPU 和 4090 校准已通过；Ubuntu CI 首次因 GitHub 账户账单锁定而未启动，尚不能声称 Linux 实机测试通过。详见 [验证记录](docs/VALIDATION.md)。
