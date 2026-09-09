@@ -1,0 +1,174 @@
+{
+  "schema": "local_audit_checks/1",
+  "scope": "Exact finite sieve words k<=20; rounded float illustration of independent exact derivative argument",
+  "rows": [
+    {
+      "k": 1,
+      "pnext": 3,
+      "N": 9,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 2,
+      "pnext": 5,
+      "N": 25,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 3,
+      "pnext": 7,
+      "N": 49,
+      "self_maximality_defects": [
+        {
+          "shift": 22,
+          "mismatch_offset": 9,
+          "absolute_index": 31,
+          "common_R_count": 7
+        }
+      ],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 4,
+      "pnext": 11,
+      "N": 121,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 5,
+      "pnext": 13,
+      "N": 169,
+      "self_maximality_defects": [
+        {
+          "shift": 112,
+          "mismatch_offset": 13,
+          "absolute_index": 125,
+          "common_R_count": 12
+        }
+      ],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 6,
+      "pnext": 17,
+      "N": 289,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 7,
+      "pnext": 19,
+      "N": 361,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 8,
+      "pnext": 23,
+      "N": 529,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 9,
+      "pnext": 29,
+      "N": 841,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 10,
+      "pnext": 31,
+      "N": 961,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 11,
+      "pnext": 37,
+      "N": 1369,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 12,
+      "pnext": 41,
+      "N": 1681,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 13,
+      "pnext": 43,
+      "N": 1849,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 14,
+      "pnext": 47,
+      "N": 2209,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 15,
+      "pnext": 53,
+      "N": 2809,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 16,
+      "pnext": 59,
+      "N": 3481,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 17,
+      "pnext": 61,
+      "N": 3721,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 18,
+      "pnext": 67,
+      "N": 4489,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 19,
+      "pnext": 71,
+      "N": 5041,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    },
+    {
+      "k": 20,
+      "pnext": 73,
+      "N": 5329,
+      "self_maximality_defects": [],
+      "fixed_uc_itinerary_defects": []
+    }
+  ],
+  "lemma3_check": {
+    "u_rounded": 1.5436890126920764,
+    "x": -0.01,
+    "f_x": 0.9998456310987308,
+    "f2_x": -0.5432124543242305,
+    "first_return_time": 2,
+    "abs_Fprime": 0.09530431642220778
+  },
+  "C2_rounding_check": {
+    "reported_estimate": 0.6598,
+    "reference_rounded": 0.6601618158,
+    "abs_error": 0.00036181579999994273,
+    "relative_error": 0.0005480713839249936
+  }
+}

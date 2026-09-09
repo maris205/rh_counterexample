@@ -1,0 +1,138 @@
+{
+  "scope": "Exact witnesses for model/inference defects, not a zeta zero search or RH disproof",
+  "symmetric_regression": {
+    "slope": "7",
+    "intercept": "0",
+    "sse": "216"
+  },
+  "time_order": {
+    "A": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "B": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "C": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "ABC": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "ACB": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "ABC_charpoly": [
+      "1",
+      "-3",
+      "3",
+      "-1"
+    ],
+    "ACB_charpoly": [
+      "1",
+      "0",
+      "0",
+      "-1"
+    ],
+    "same_arithmetic_average": true
+  },
+  "upper_halfplane_unwrap": {
+    "theta_over_pi": [
+      "1/100",
+      "1/10",
+      "2/5",
+      "7/10",
+      "99/100"
+    ],
+    "phi_over_pi": [
+      "1/100",
+      "1/10",
+      "2/5",
+      "7/10",
+      "99/100"
+    ],
+    "wraps": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "first_return": {
+    "u": "15437/10000",
+    "x": "-1/1000000",
+    "return_time": 2,
+    "absolute_derivative": "2383009689996321347941547/250000000000000000000000000000",
+    "below_one": true
+  },
+  "all_exact_assertions_passed": true
+}

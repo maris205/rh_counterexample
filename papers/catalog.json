@@ -1,0 +1,37 @@
+[
+  {
+    "id": "paper-01",
+    "title": "The emergence of prime distribution from low-dimensional deterministic chaos",
+    "source_filename": "1-The emergence of prime distribution from low-dimensional deterministic chaos.pdf",
+    "pages": 24,
+    "pdf_sha256": "78a65db26110ef8173c3d7dc50caf2b598e59b854e7b5afa3983891008cb953e"
+  },
+  {
+    "id": "paper-02",
+    "title": "Transient Chaos and Topological Bounds in Prime Dynamics: Revisiting the One-Dimensional Sieve Mapping",
+    "source_filename": "2-Transient Chaos and Topological Bounds in Prime Dynamics.pdf",
+    "pages": 25,
+    "pdf_sha256": "05044a54a6bde0bbd71dc7c7c6deb305638803afe36f8fe2d4167b88c5ad898d"
+  },
+  {
+    "id": "paper-03",
+    "title": "A Sequential Birkhoff Theorem for Slow Logarithmic Drift in Non-Uniformly Expanding Unimodal Maps",
+    "source_filename": "3-A Sequential Birkhoff Theorem.pdf",
+    "pages": 8,
+    "pdf_sha256": "6ad40b40e81a22266c1ca5baa34b5692e4e0b4dbc7f4764b57db190193731f9b"
+  },
+  {
+    "id": "paper-04",
+    "title": "Spectral Isomorphism between Renormalization Flow in Non-Autonomous Quadratic Maps and Riemann Zeros",
+    "source_filename": "4-riemann_logistic_v4_fixed.pdf",
+    "pages": 35,
+    "pdf_sha256": "030c072bcec069ef1c3d87b84025ed830e40591970461e5195b2991adaedb0e3"
+  },
+  {
+    "id": "paper-05",
+    "title": "An Area-Preserving Hénon-Map Model for the Riemann Zeros: A Deterministic-Dynamics Approach with Quantum and Dissipative Solvers",
+    "source_filename": "5-An Area-Preserving Henon-Map Model.pdf",
+    "pages": 17,
+    "pdf_sha256": "23dad812162728316f633081e1a1995d4c00614a70d0f5877d425c68d0c726b9"
+  }
+]
