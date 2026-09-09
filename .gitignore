@@ -1,0 +1,11 @@
+.venv/
+.deps/
+__pycache__/
+*.py[cod]
+runs/
+*.sqlite3*
+*.log
+*.tmp
+.env
+.env.*
+*.pdf

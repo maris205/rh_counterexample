@@ -1,0 +1,35 @@
+{
+  "version": "gap-search-v1",
+  "hypothesis": "Adjacent sign correlation minima and three-event curvature maxima may supply useful actual-zeta candidate heights.",
+  "models": [
+    {"k": 3, "m": 22, "N": 26, "P": 30, "support": [9,11,13,15,17,21,23,25], "signs": [1,-1,-1,1,-1,1,-1,1]},
+    {"k": 5, "m": 112, "N": 56, "P": 2310, "support": [13,15,17,23,25,27,29,31,39,41,43,45,47,51,53,55], "signs": [-1,1,-1,-1,1,1,-1,-1,1,-1,-1,1,-1,1,-1,1]}
+  ],
+  "blocks": [
+    {"id": "low_4096", "regime": "low_calibration", "base": "4096", "width": "128"},
+    {"id": "low_8192", "regime": "low_calibration", "base": "8192", "width": "128"},
+    {"id": "high_4096", "regime": "high_search", "base": "3000000004096", "width": "128"},
+    {"id": "high_8192", "regime": "high_search", "base": "3000000008192", "width": "128"}
+  ],
+  "rules": ["A_min", "B_max"],
+  "shuffle_seed_base": 2026090920,
+  "grid_step": "0.05",
+  "grid_dps": 40,
+  "refine_dps": 80,
+  "root_bracket_width": "1e-25",
+  "maximum_bisections": 100,
+  "centers_per_cell": 2,
+  "minimum_center_separation": "5",
+  "sigma_bounds": ["0.55", "0.65"],
+  "height_radius": "0.05",
+  "center_sigma": "0.6",
+  "workers": 4,
+  "per_window_seconds": 600,
+  "session_seconds": 7200,
+  "de": {"maxiter": 15, "popsize": 8, "dps": 40, "seed_base": 2026090930, "maximum_evaluations": 256},
+  "point_check_dps": [40,80],
+  "small_box_radius": "1e-8",
+  "candidate_abs_threshold": 0.000001,
+  "primary_description": "Center |zeta(0.6+it)|, grouped separately by regime/k/rule/source, with missing slots explicit.",
+  "secondary_description": "Best actual |zeta| from equal-budget DE in each frozen rectangle; no global optimum claim."
+}
