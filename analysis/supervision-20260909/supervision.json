@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-09-09T15:19:41.982030+00:00",
+  "mode": "active_session_supervision",
+  "persistent_scheduler_installed": false,
+  "poll_target_seconds": 60,
+  "coordinator": "root",
+  "scope": "Theory review and read-only server01 audit",
+  "account_quota_remaining": "not available to this toolset",
+  "tasks": [
+    {
+      "name": "metric_review",
+      "state": "dispatched",
+      "artifact": "metric-review.md"
+    },
+    {
+      "name": "results_snapshot",
+      "state": "dispatched",
+      "artifact": "server01-audit.json"
+    }
+  ]
+}
