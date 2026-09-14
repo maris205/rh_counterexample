@@ -677,3 +677,18 @@ zero failures or timeouts and the sum of all per-window
 possibility; it records a negative finite numerical screen in a region where a
 small displacement from the critical line would have been visible to this
 method. The final result is `runs/zeta-nearline-batch-py3/summary.json`.
+
+## 2026-09-14: Phase A resumable common-spectrum batch
+
+Implemented `prime_spectrum_batch_py3.py`, a per-artifact resumable runner for
+Mertens, Lambda/psi, prime-count/short-interval, independent-grid demodulation,
+density-preserving prime surrogates, and stratified shuffle controls. It uses
+two arithmetic scales, two trimmed log grids, three held-out cut points, and
+updates `progress.json` atomically after every subtask before producing
+`summary.json` and `report.md`. A smoke run at `N=50,000` completed six
+subtasks with zero failures and zero cross-channel candidates. The long run is
+launched in `runs/prime-spectrum-phaseA-py3/` under Python 3.14 because this
+host has no Python 3.10 runtime; every result records that interpreter fact.
+All outputs remain finite numerical screens or empirical surrogate controls.
+No Mertens, prime-count, Lambda/psi, or short-interval anomaly is an actual
+zeta candidate, and no Arb/FLINT interval certification is claimed.

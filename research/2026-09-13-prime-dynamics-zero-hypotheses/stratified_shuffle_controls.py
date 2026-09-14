@@ -31,6 +31,35 @@ def score(chans,n,grids,tgrid,window=(37.,38.)):
     return max(vals) if vals else 0.
 
 
+def run(n: int, samples: int, reps: int, block: int, seed: int = 20260914) -> dict:
+    """Programmatic entry point used by the resumable Phase A runner."""
+    mu = mobius_sieve(n)
+    lam, theta = von_mangoldt_theta_linear_sieve(n)
+    grids = [(max(128, samples // 2), 0.0), (samples, 0.08)]
+    tg = np.arange(37., 38.0001, .05)
+    base = {'mertens': mu.astype(float), 'psi': lam.astype(float), 'theta': theta.astype(float)}
+    real = score(base, n, grids, tg)
+    rows = []
+    for rep in range(reps):
+        rng = np.random.default_rng(seed + rep * 1009)
+        g = {k: block_permute(v, rng, block) for k, v in base.items()}
+        w = {k: within_block(v, rng, block) for k, v in base.items()}
+        rows.append({'rep': rep, 'block_permute': score(g, n, grids, tg),
+                     'within_block': score(w, n, grids, tg)})
+    bp = [r['block_permute'] for r in rows]
+    wb = [r['within_block'] for r in rows]
+    return {'status': 'COMPLETED',
+            'purpose': 'stratified block-permutation and within-block shuffle controls; not a zeta certificate',
+            'configuration': {'n': n, 'samples': samples, 'reps': reps, 'block': block,
+                              'grids': grids, 'window': [37., 38.]},
+            'real_max_r2': real, 'replicates': rows,
+            'quantiles': {'block_permute_q95': float(np.quantile(bp, .95)) if bp else 0.,
+                         'within_block_q95': float(np.quantile(wb, .95)) if wb else 0.,
+                         'block_permute_mean': float(np.mean(bp)) if bp else 0.,
+                         'within_block_mean': float(np.mean(wb)) if wb else 0.},
+            'interpretation': 'Empirical local-structure controls only; exceedance is not evidence of an off-line zeta zero.'}
+
+
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--n',type=int,default=1_000_000); ap.add_argument('--reps',type=int,default=8)
     ap.add_argument('--block',type=int,default=50_000); ap.add_argument('--output',type=Path,required=True); args=ap.parse_args()
