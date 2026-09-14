@@ -179,7 +179,8 @@ def main() -> None:
     lines = ["# Phase A prime-spectrum batch", "", f"Status: **{summary['status']}**", "",
              f"Completed artifacts: {summary['completed_artifacts']}",
              f"Failed artifacts: {summary['failed_artifacts']}",
-             f"Cross-channel candidates: {summary['candidate_count']}", "",
+             f"Screen candidate clusters: {summary['screen_candidate_count']}",
+             f"Eligible for zeta handoff: {summary['eligible_candidate_count']}", "",
              "This report is a finite numerical screen. Controls are empirical surrogates; "
              "no Mertens, prime-count, Lambda/psi, or short-interval anomaly is a zeta zero. "
              "No Arb/FLINT interval certification was attempted.", ""]
