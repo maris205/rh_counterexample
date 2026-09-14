@@ -1,0 +1,44 @@
+{
+  "manifest_version": "2026-09-13.v1",
+  "purpose": "Pre-registered unknown-frequency screen; heuristic candidate generator only, never a zeta-zero certificate.",
+  "t_range": [4.0, 40.0],
+  "t_step": 0.05,
+  "known_ordinates": [14.134725141734694, 21.022039638771555, 25.01085758014569, 30.42487612585951, 32.93506158773919],
+  "known_exclusion_radius": 0.75,
+  "cluster_tolerance": 0.25,
+  "required_independent_channels": 3,
+  "required_independent_grids": 3,
+  "required_arithmetic_scales": 2,
+  "phase_resultant_min": 0.80,
+  "control_policy": {
+    "alpha": 0.95,
+    "metric": "r2",
+    "aggregation": "max_available_q95_conservative",
+    "expected_q95_floor": 0.016892465431210348,
+    "expected_q95_sources": [
+      "runs/multi-grid-control-1e6.json:control_q95",
+      "runs/stratified-controls-1e7.json:quantiles.block_permute_q95",
+      "runs/stratified-controls-1e7.json:quantiles.within_block_q95"
+    ]
+  },
+  "grid_design": [
+    {"samples": 1024, "trim": 0.0},
+    {"samples": 1536, "trim": 0.02},
+    {"samples": 2048, "trim": 0.05},
+    {"samples": 3072, "trim": 0.10}
+  ],
+  "arithmetic_scales": [1000000, 10000000],
+  "observation_inputs": [
+    "runs/multi-grid-demod-1e6-v3.json",
+    "runs/multi-grid-demod-1e7-v2.json"
+  ],
+  "control_inputs": [
+    "runs/multi-grid-control-1e6.json",
+    "runs/stratified-controls-1e7.json"
+  ],
+  "excluded_posthoc_operations": [
+    "changing t range, known-zero exclusion radius, cluster tolerance, channel/grid/N thresholds, or phase threshold after seeing peaks",
+    "adding a new input file without creating a new manifest version",
+    "calling zeta verification for a cluster that fails any gate"
+  ]
+}
