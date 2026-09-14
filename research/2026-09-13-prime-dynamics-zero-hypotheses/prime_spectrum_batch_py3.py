@@ -72,7 +72,7 @@ def run_task(task: str, n: int, samples: int, reps: int, blocks: tuple[int, ...]
 
 
 def summarize(artifacts: list[dict[str, Any]], config: dict[str, Any]) -> dict[str, Any]:
-    candidates: list[dict[str, Any]] = []
+    screen_candidates: list[dict[str, Any]] = []
     failures = [a for a in artifacts if a.get("status") != "COMPLETED"]
     for a in artifacts:
         for row in a.get("blind_consensus", []):
@@ -81,17 +81,29 @@ def summarize(artifacts: list[dict[str, Any]], config: dict[str, Any]) -> dict[s
             # demodulator reports only the first two, so no row is promoted
             # without a separate hold-out/control gate.
             if row.get("channel_count", 0) >= 3 and row.get("grid_count", 0) >= 2:
-                candidates.append({"n": a.get("batch_scale_n"), **row,
-                                   "eligible_for_zeta": False,
-                                   "reason": "finite screen; holdout/control gate not encoded in this row"})
+                screen_candidates.append({"n": a.get("batch_scale_n"), **row,
+                                          "eligible_for_zeta": False,
+                                          "reason": "finite screen; holdout/control gate not encoded in this row"})
+    # A zeta handoff requires the same frequency to recur across both scales;
+    # this batch intentionally does not promote screen rows because its
+    # per-task artifacts do not encode the full joint hold-out/control test.
+    eligible: list[dict[str, Any]] = []
+    for row in screen_candidates:
+        if sum(abs(float(row["t_mean"]) - float(x["t_mean"])) <= 0.25
+               for x in screen_candidates) >= len({a.get("batch_scale_n") for a in artifacts}):
+            row = dict(row)
+            row["reason"] = "cross-scale screen hit, but full holdout/control gate is absent"
+            eligible.append(row)
     return {
         "status": "COMPLETED" if not failures else "COMPLETED_WITH_FAILURES",
         "purpose": "Phase A common-spectrum finite numerical and surrogate screening",
         "configuration": config,
         "completed_artifacts": len(artifacts),
         "failed_artifacts": len(failures),
-        "candidate_count": len(candidates),
-        "candidates": candidates,
+        "screen_candidate_count": len(screen_candidates),
+        "eligible_candidate_count": 0,
+        "candidate_count": len(screen_candidates),
+        "candidates": screen_candidates,
         "interpretation": (
             "Mertens, Lambda/psi, prime-count and short-interval outputs are finite feature diagnostics. "
             "Random, density-preserving, and block controls are empirical surrogates. "
