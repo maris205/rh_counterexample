@@ -703,3 +703,13 @@ completed with zero failures and zero screen or zeta-handoff candidates. The
 outputs are in `runs/short-interval-phaseB-py3/`. This remains a finite
 short-interval/gap stress screen with empirical controls; it provides no zeta
 numerical candidate or Arb/FLINT certification.
+
+## 2026-09-15: Phase C family-control batch completed
+
+The resumable `family_phaseC_batch_py3.py` completed four artifacts at
+`N=200,000`: the chi4/chi5 Euler-product fixtures, the Davenport--Heilbronn
+periodic sensitivity fixture, and the exact finite-field curve panel. All
+four tasks completed with zero failures and zero zeta-handoff candidates. The
+Davenport--Heilbronn row remains an uncertified off-line sensitivity control;
+periodic or finite-field behavior cannot transfer to the Riemann zeta
+function. Outputs are in `runs/family-phaseC-py3/`.
