@@ -692,3 +692,14 @@ host has no Python 3.10 runtime; every result records that interpreter fact.
 All outputs remain finite numerical screens or empirical surrogate controls.
 No Mertens, prime-count, Lambda/psi, or short-interval anomaly is an actual
 zeta candidate, and no Arb/FLINT interval certification is claimed.
+
+## 2026-09-15: Phase B short-interval stress batch completed
+
+The resumable `short_interval_phaseB_batch_py3.py` completed four artifacts at
+`N=10^6` and `5*10^6` for `theta=0.525` and `0.60`, with three held-out cuts,
+two block scales, random/block controls, logarithmic-density-preserving
+surrogates, and block-shuffled gap-preserving surrogates. All four tasks
+completed with zero failures and zero screen or zeta-handoff candidates. The
+outputs are in `runs/short-interval-phaseB-py3/`. This remains a finite
+short-interval/gap stress screen with empirical controls; it provides no zeta
+numerical candidate or Arb/FLINT certification.
