@@ -713,3 +713,14 @@ four tasks completed with zero failures and zero zeta-handoff candidates. The
 Davenport--Heilbronn row remains an uncertified off-line sensitivity control;
 periodic or finite-field behavior cannot transfer to the Riemann zeta
 function. Outputs are in `runs/family-phaseC-py3/`.
+
+## 2026-09-15: Phase A phase-coherence theory audit
+
+Added `phase_concordance_audit_py3.py` and
+`PHASE_A_THEORY_NOTE.md`. Reusing the completed Phase A artifacts, the
+`t=37.5` screen cluster has phase circular resultants `0.614` at `N=10^6` and
+`0.334` at `N=5*10^6`; both observed maxima remain below the largest control
+q95. The cluster is therefore retained only as a finite-window diagnostic.
+The theory note specifies joint shared-frequency regression, continuous-grid
+spread tests, sampling-operator leakage baselines, and surrogate covariance
+multiplicity correction as the next quantitative gates.
