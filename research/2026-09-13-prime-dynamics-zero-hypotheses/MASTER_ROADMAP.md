@@ -65,9 +65,24 @@ zero off-line numerical candidates, and no root existence/count certification.
 Disposition: **RC:A1 / A1-PILOT-001 / RC:C2 / END**, scoped to this pilot.
 At t=10010, changing the starting real part selected different critical-line
 basins. This is a computational limitation to retain, not an RH anomaly.
-No region has been excluded and no follow-up batch is running. See the
+That pilot did not exclude a region; its completed follow-up is reported below. See the
 [research-status register](RESEARCH_STATUS_REGISTER.md) for evidence-linked
 entries suitable for later summary papers.
+
+## Bounded follow-up: certified rectangle counts
+
+[A1-PILOT-002](A1_PILOT_002_RESULTS.md): **RC:A1 / RC:E1 / END**.
+All four actual-zeta counts completed in 81.94 seconds, with zero failures or
+unresolved counts, after 9/9 expected calibration outcomes. At both 40 and 70
+digits, the closed rectangle `[.5001,.70] x [10010,10011]` is certified zero-free;
+the crossing rectangle `[.49,.51] x [10010,10011]` contains two zeros with multiplicity.
+These are whole-segment Arb/FLINT argument-principle results, conditional on the
+audited implementation, not formal proof objects or independent-library checks.
+There is no off-line candidate, whole-height-band exclusion or RH conclusion.
+No batch remains running. A possible next local question is separate symmetric
+one-zero rectangles around each endpoint; that has not been launched and is
+certification capability work, not anomaly discovery. Do not replace discovery
+with indefinitely expanding empty-rectangle checks.
 
 ## Evidence ledger
 
@@ -77,7 +92,7 @@ entries suitable for later summary papers.
 | Corrected arithmetic common-spectrum screen | v2 long: 598/598 tasks, zero failures, zero passing screen candidates | No passing nomination under that finite configuration; the full validation protocol remains incomplete |
 | Coupled Euler model calibration | Latest background comparison: 1393/1393 tasks, zero failures | At epsilon=.3, background-model neighborhood recovery 8/8, with descriptive control passes in 5/8 designs; no passes at .03 or .1 |
 | Actual new zeta root candidate | None supplied by the recent calibration work | No new off-line root claim |
-| Arb/FLINT interval certification | None for an off-line zeta zero | No certified RH counterexample |
+| Arb/FLINT interval certification | A1-PILOT-002: bounded target zero-free; crossing comparison count two | Exact scoped counts; none for an off-line zeta zero; no certified RH counterexample |
 
 The latest 5/8 refers to synthetic designs, not five arithmetic or zeta candidates.
 All their control ranks equal the B=19 Monte Carlo floor .05; some held-out gains
