@@ -2,6 +2,14 @@
 
 ## Current evidence status — corrected 2026-09-16
 
+Latest comparison: [frozen channel envelopes](EULER_ENVELOPE_COMPARISON.md)
+completed 929/929 model tasks, zero failures, on phase seeds 6--9. Both the
+original and channel-envelope models nominate within .25 of modulation t in
+2/16 designs, with zero all-primary-cell positive predictions in either model.
+The two approximate recoveries nominate 26.75 for modulation 27. Controls
+reselect frequencies and use the maximum across both models. This remains
+model calibration (candidate count null); the discovery model is unchanged.
+
 Latest diagnostic: [fixed-frequency transfer](EULER_TRANSFER_DIAGNOSTICS.md)
 completed 16/16 new-phase model tasks (3,072 fits), zero failures. With the
 original constant envelope, all-cell positive prediction is 3/16 for the full
