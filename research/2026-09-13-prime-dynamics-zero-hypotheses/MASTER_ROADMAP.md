@@ -2,6 +2,15 @@
 
 ## Current evidence status — corrected 2026-09-16
 
+Latest route: [Euler-coupled calibration](EULER_COUPLED_CALIBRATION.md)
+completed 465/465 model tasks, zero numerical failures, following one recovered
+Windows progress-file interruption. All three coefficient families now come
+from the same weights on actual primes and satisfy tested inverse/log-derivative
+identities. Neither modulation frequency was nominated in its eight designs
+(0/8 recovery); candidate count is null because this is model calibration.
+This does not inject or certify a zeta zero. The linked note also qualifies
+the older position-resampling and Phase C preprocessing claims.
+
 The historical Phase A/B/C programs completed computations, **not the full
 scientific promotion gates**. Their literal zero handoff counts and the pooled
 phase rejection at `t=37.5` are withdrawn as measured rejection evidence.
