@@ -20,11 +20,10 @@ import numpy as np
 
 from mertens_dynamics import mobius_sieve
 from lambda_psi_dynamics import von_mangoldt_theta_linear_sieve
+from known_ordinates import known_ordinates
 
 
-KNOWN_T = np.array([14.134725141734694, 21.022039638771555,
-                    25.01085758014569, 30.424876125859513,
-                    32.93506158773919])
+KNOWN_T = np.array(known_ordinates(0.0, 40.0))  # legacy import compatibility
 
 
 def cumulative_grid(cumulative: np.ndarray, n: int, samples: int,
@@ -122,14 +121,16 @@ def control_quantiles(base_weights: dict[str, np.ndarray], n: int,
     modes: list[tuple[str, int | None]] = [("global_shuffle", None)]
     modes.extend((f"block_shuffle_{b}", int(b)) for b in block_sizes)
     out: list[dict] = []
+    known = np.array(known_ordinates(float(min(t_grid)), float(max(t_grid))))
     for samples, phase in grids:
         for channel, weights in base_weights.items():
             for label, block in modes:
                 candidate_scores: list[float] = []
                 top_scores: list[float] = []
                 for rep in range(max(0, int(reps))):
-                    rr = np.random.default_rng(seed + 1009 * (rep + 1)
-                                                + hash((samples, phase, channel, label)) % 100000)
+                    token = f"{seed}:{rep}:{samples}:{phase}:{channel}:{label}"
+                    stable_seed = int.from_bytes(hashlib.sha256(token.encode()).digest()[:8], "big")
+                    rr = np.random.default_rng(stable_seed)
                     shuffled = shuffled_coefficients(weights, rr, block)
                     cumulative = np.cumsum(shuffled, dtype=np.float64)
                     u, y = cumulative_grid(cumulative, n, samples, phase, channel)
@@ -137,7 +138,7 @@ def control_quantiles(base_weights: dict[str, np.ndarray], n: int,
                     candidate = next((x["r2"] for x in rows
                                       if abs(x["t"] - candidate_t) <= 0.5 * (t_grid[1] - t_grid[0])), 0.0)
                     blind = [x["r2"] for x in rows
-                             if np.min(np.abs(KNOWN_T - x["t"])) >= 0.35]
+                             if not np.any(np.abs(known - x["t"]) <= 0.35)]
                     candidate_scores.append(float(candidate))
                     top_scores.append(float(max(blind) if blind else 0.0))
                 out.append({"samples": samples, "phase": phase, "channel": channel,
@@ -159,6 +160,7 @@ def run(n: int, t_min: float, t_max: float, t_step: float,
     cum_lam = np.cumsum(lam, dtype=np.float64)
     cum_theta = np.cumsum(theta_w, dtype=np.float64)
     t_grid = np.arange(t_min, t_max + 0.5 * t_step, t_step)
+    known = np.array(known_ordinates(t_min, float(t_grid[-1])))
     channels = {"mertens": cum_mu, "psi": cum_lam, "theta": cum_theta}
     records = []
     for samples, phase in grids:
@@ -174,7 +176,7 @@ def run(n: int, t_min: float, t_max: float, t_step: float,
     candidates = []
     for rec in records:
         for p in rec["peaks"]:
-            if np.min(np.abs(KNOWN_T - p["t"])) < 0.35:
+            if np.any(np.abs(known - p["t"]) <= 0.35):
                 continue
             candidates.append({"t": p["t"], "r2": p["r2"],
                                "channel": rec["channel"],
@@ -201,9 +203,9 @@ def run(n: int, t_min: float, t_max: float, t_step: float,
     candidate_t = 37.5
     observed_candidate = []
     for rec in records:
-        rows = demod_scan(*cumulative_grid(channels[rec["channel"]], n,
-                                           rec["samples"], rec["phase"], rec["channel"]),
-                          np.array([candidate_t]), 1)
+        u, y = cumulative_grid(channels[rec["channel"]], n,
+                               rec["samples"], rec["phase"], rec["channel"])
+        rows = demod_scan(u, np.gradient(y, u), np.array([candidate_t]), 1)
         observed_candidate.append({"samples": rec["samples"], "phase": rec["phase"],
                                    "channel": rec["channel"],
                                    "candidate_t": candidate_t,
@@ -218,7 +220,9 @@ def run(n: int, t_min: float, t_max: float, t_step: float,
                                "t_step": t_step, "grids": grids,
                                "control_reps": control_reps,
                                "block_sizes": list(block_sizes), "control_seed": seed},
-            "known_ordinates_excluded": KNOWN_T.tolist(),
+            "known_ordinates_excluded": known.tolist(),
+            "candidate_37_5_role": "known-line calibration neighborhood, not a blind candidate",
+            "observable_dependence": "psi and theta share a prime source; not independent channel families",
             "records": records, "blind_consensus": consensus,
             "candidate_37_5": observed_candidate, "control_quantiles": controls,
             "interpretation": "Common FFT bins are not accepted unless continuous-frequency peaks survive independent log-grid starts, sample counts, and at least two channels."}

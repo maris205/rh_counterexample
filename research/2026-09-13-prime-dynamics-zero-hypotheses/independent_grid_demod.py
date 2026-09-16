@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse, json
 from pathlib import Path
 import numpy as np
+from known_ordinates import known_ordinates
 
 
 def mobius_sieve(n):
@@ -35,9 +36,9 @@ def main():
     ap.add_argument('--t-max',type=float,default=40.0); ap.add_argument('--t-step',type=float,default=.25)
     ap.add_argument('--output',type=Path,required=True); args=ap.parse_args()
     mu=mobius_sieve(args.n); xs=np.unique(np.maximum(2,np.geomspace(2,args.n,20000).astype(np.int64)))
-    M=np.cumsum(mu,dtype=np.int64)[xs-1]; u=np.log(xs.astype(float)); y=M/np.sqrt(xs.astype(float))
+    M=np.cumsum(mu,dtype=np.int64)[xs]; u=np.log(xs.astype(float)); y=M/np.sqrt(xs.astype(float))
     base_ts=np.arange(args.t_min,args.t_max+args.t_step/2,args.t_step); grids={}
-    known=[14.1347251417,21.0220396388,25.0108575801,30.4248761259,32.9350615877]
+    known=known_ordinates(args.t_min, args.t_max + max(float(x) for x in args.t_offsets.split(',')), .75)
     for m in [int(x) for x in args.grid_sizes.split(',')]:
         ug=np.linspace(u[0],u[-1],m); yg=np.interp(ug,u,y)
         for off in [float(x) for x in args.t_offsets.split(',')]:

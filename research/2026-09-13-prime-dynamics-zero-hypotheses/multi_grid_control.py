@@ -25,12 +25,12 @@ def main():
     mu=mobius_sieve(args.n); lam,theta=von_mangoldt_theta_linear_sieve(args.n)
     grids=[(1024,0.0),(1536,0.02),(2048,0.05)]; t_grid=np.arange(37.0,38.0001,0.05)
     real={"mertens":mu.astype(float),"psi":lam.astype(float),"theta":theta.astype(float)}
-    real_score=score_window(real,args.n,grids,t_grid)
+    real_score=score_window({k: np.cumsum(v) for k,v in real.items()},args.n,grids,t_grid)
     rows=[]
     for rep in range(args.reps):
         rng=np.random.default_rng(args.seed+rep*1009); controls={}
         for name,arr in real.items():
-            z=arr.copy(); rng.shuffle(z[1:]); controls[name]=z
+            z=arr.copy(); rng.shuffle(z[1:]); controls[name]=np.cumsum(z)
         rows.append({'rep':rep,'global_shuffle_max_r2':score_window(controls,args.n,grids,t_grid)})
     q95=float(np.quantile([r['global_shuffle_max_r2'] for r in rows],.95))
     out={'status':'COMPLETED','purpose':'control quantile for rejected multi-grid residual; not a zeta certificate',

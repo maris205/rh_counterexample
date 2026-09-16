@@ -1,4 +1,4 @@
-"""Resumable Phase A common-spectrum batch runner.
+"""Legacy per-channel diagnostic runner; use common_spectrum_v2_batch_py3.
 
 Each (scale, task) is an independent JSON artifact.  ``progress.json`` is
 updated atomically after every task so an interrupted run can resume without
@@ -84,25 +84,16 @@ def summarize(artifacts: list[dict[str, Any]], config: dict[str, Any]) -> dict[s
                 screen_candidates.append({"n": a.get("batch_scale_n"), **row,
                                           "eligible_for_zeta": False,
                                           "reason": "finite screen; holdout/control gate not encoded in this row"})
-    # A zeta handoff requires the same frequency to recur across both scales;
-    # this batch intentionally does not promote screen rows because its
-    # per-task artifacts do not encode the full joint hold-out/control test.
-    eligible: list[dict[str, Any]] = []
-    for row in screen_candidates:
-        if sum(abs(float(row["t_mean"]) - float(x["t_mean"])) <= 0.25
-               for x in screen_candidates) >= len({a.get("batch_scale_n") for a in artifacts}):
-            row = dict(row)
-            row["reason"] = "cross-scale screen hit, but full holdout/control gate is absent"
-            eligible.append(row)
     return {
         "status": "COMPLETED" if not failures else "COMPLETED_WITH_FAILURES",
         "purpose": "Phase A common-spectrum finite numerical and surrogate screening",
         "configuration": config,
-        "completed_artifacts": len(artifacts),
+        "completed_artifacts": len(artifacts) - len(failures),
         "failed_artifacts": len(failures),
         "screen_candidate_count": len(screen_candidates),
-        "eligible_candidate_count": 0,
-        "candidate_count": len(screen_candidates),
+        "gate_status": "NOT_EVALUATED",
+        "eligible_candidate_count": None,
+        "candidate_count": None,
         "candidates": screen_candidates,
         "interpretation": (
             "Mertens, Lambda/psi, prime-count and short-interval outputs are finite feature diagnostics. "
@@ -140,8 +131,17 @@ def main() -> None:
               "blocks": list(blocks), "splits": list(splits), "grids": grids,
               "seed": args.seed, "python": sys.version, "platform": platform.platform(),
               "requested_python": "py -3.10 (unavailable; executed with Python 3.14)",
-              "tasks": tasks}
+              "tasks": tasks,
+              "schema": "legacy-diagnostics-corrected-v2",
+              "source_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                for p in sorted(HERE.glob("*.py"))}}
     outdir.mkdir(parents=True, exist_ok=True)
+    previous_config = load_json(outdir / "config.json")
+    canonical = lambda obj: json.dumps(obj, sort_keys=True)
+    if previous_config is not None and canonical(previous_config) != canonical(config):
+        raise ValueError("configuration or source changed; preserve old results and choose a new output directory")
+    if previous_config is None and list(outdir.glob("*.json")):
+        raise ValueError("unversioned output directory; choose a new output directory")
     atomic_json(outdir / "config.json", config)
     progress_path = outdir / "progress.json"
     previous = load_json(progress_path) or {"completed": [], "failed": []}
@@ -154,7 +154,7 @@ def main() -> None:
             artifact = outdir / f"{key}.json"
             if key in completed and artifact.exists():
                 obj = load_json(artifact)
-                if obj is not None:
+                if obj is not None and obj.get("status") == "COMPLETED":
                     artifacts.append({"key": key, "artifact": str(artifact), **obj})
                     continue
             started = time.time()
@@ -168,8 +168,11 @@ def main() -> None:
             except Exception as exc:  # persist failure and continue to next route
                 status = "FAILED"
                 failed.append(key)
-                atomic_json(artifact, {"status": "FAILED", "batch_task": task,
-                                       "batch_scale_n": n, "error": repr(exc)})
+                completed = [x for x in completed if x != key]
+                obj = {"status": "FAILED", "batch_task": task,
+                       "batch_scale_n": n, "error": repr(exc)}
+                atomic_json(artifact, obj)
+                artifacts.append({"key": key, "artifact": str(artifact), **obj})
             atomic_json(progress_path, {"status": "RUNNING", "updated": time.time(),
                                         "completed": sorted(set(completed)),
                                         "failed": sorted(set(failed)), "last_task": key,

@@ -15,9 +15,9 @@ import math
 from pathlib import Path
 
 import numpy as np
+from known_ordinates import known_ordinates
 
-KNOWN_T = [14.134725141734694, 21.022039638771555, 25.01085758014569,
-           30.424876125859513, 32.93506158773919]
+KNOWN_T = known_ordinates(0.0, 40.0)
 
 
 def prime_indicator_linear_sieve(n: int) -> tuple[np.ndarray, np.ndarray]:
@@ -39,8 +39,12 @@ def prime_indicator_linear_sieve(n: int) -> tuple[np.ndarray, np.ndarray]:
     return indicator, np.asarray(primes, dtype=np.int64)
 
 
-def grid(n: int, samples: int) -> tuple[np.ndarray, np.ndarray]:
-    xs = np.unique(np.maximum(10, np.geomspace(10, n, samples).astype(np.int64)))
+def grid(n: int, samples: int, trim: float = 0.0) -> tuple[np.ndarray, np.ndarray]:
+    if n < 11 or samples < 16 or not 0 <= trim < 0.45:
+        raise ValueError("require n>=11, samples>=16, and 0<=trim<0.45")
+    lo, hi = math.log(10), math.log(n)
+    margin = trim * (hi - lo)
+    xs = np.unique(np.clip(np.exp(np.linspace(lo + margin, hi - margin, samples)).astype(np.int64), 10, n))
     return xs, np.log(xs.astype(np.float64))
 
 
@@ -55,12 +59,14 @@ def short_signal(indicator: np.ndarray, xs: np.ndarray, theta: float = 0.5,
     h_power = np.maximum(4, np.rint(np.power(x.astype(np.float64), theta)).astype(np.int64))
     hi_power = np.minimum(n, x + h_power)
     cp = prefix[hi_power] - prefix[x]
-    expected_power = h_power.astype(np.float64) / np.maximum(logx, 1.0)
+    # The count uses a truncated window, so the baseline must use that same
+    # window. At x=n the zero-support diagnostic is zero, not a negative spike.
+    expected_power = (hi_power - x).astype(np.float64) / np.maximum(logx, 1.0)
 
     h_log = np.maximum(4, np.rint(x.astype(np.float64) * math.expm1(log_width)).astype(np.int64))
     hi_log = np.minimum(n, x + h_log)
     cl = prefix[hi_log] - prefix[x]
-    expected_log = h_log.astype(np.float64) / np.maximum(logx, 1.0)
+    expected_log = (hi_log - x).astype(np.float64) / np.maximum(logx, 1.0)
 
     power_resid = (cp.astype(np.float64) - expected_power) / np.sqrt(np.maximum(expected_power, 1e-9))
     log_resid = (cl.astype(np.float64) - expected_log) / np.sqrt(np.maximum(expected_log, 1e-9))
@@ -69,13 +75,15 @@ def short_signal(indicator: np.ndarray, xs: np.ndarray, theta: float = 0.5,
 
 def gap_signal(primes: np.ndarray, u: np.ndarray) -> np.ndarray:
     """Interpolate normalized consecutive-prime gaps onto a log grid."""
+    if np.any(primes < 2):
+        raise ValueError("prime/surrogate positions must be at least 2")
     if len(primes) < 4:
         return np.zeros_like(u)
     p = primes.astype(np.float64)
     gaps = np.diff(p)
     # Poisson heuristic predicts gap approximately log p; use a dimensionless
     # residual.  This is a feature signal, not a theorem about independence.
-    vals = gaps * np.log(np.maximum(p[:-1], 3.0)) - 1.0
+    vals = gaps / np.log(p[:-1]) - 1.0
     up = np.log(p[:-1])
     return np.interp(u, up, vals, left=float(vals[0]), right=float(vals[-1]))
 
@@ -133,7 +141,8 @@ def log_increment(u: np.ndarray, y: np.ndarray) -> np.ndarray:
 
 def channel_record(u: np.ndarray, y: np.ndarray, splits: tuple[float, ...]) -> dict:
     dy = log_increment(u, y)
-    return {"rms": float(np.sqrt(np.mean(y * y))),
+    return {"metric_interpretation": "Fixed-frequency holdout projections refit trend, amplitude and phase on holdout; not frozen prediction. FFT peaks are descriptive on the rounded log grid.",
+            "rms": float(np.sqrt(np.mean(y * y))),
             "top_spectrum": top_spectrum(u, y),
             "train_holdout": train_holdout(u, y),
             "increment_rms": float(np.sqrt(np.mean(dy * dy))),
@@ -150,11 +159,11 @@ def shuffled_indicator(indicator: np.ndarray, rng: np.random.Generator,
                        block_size: int | None) -> np.ndarray:
     out = indicator.copy()
     if block_size is None:
-        body = out[1:]
+        body = out[2:]
         rng.shuffle(body)
-        out[1:] = body
+        out[2:] = body
         return out
-    for start in range(1, len(out), block_size):
+    for start in range(2, len(out), block_size):
         stop = min(len(out), start + block_size)
         body = out[start:stop]
         rng.shuffle(body)

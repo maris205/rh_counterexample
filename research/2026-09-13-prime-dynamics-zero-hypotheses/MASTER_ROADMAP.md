@@ -1,5 +1,27 @@
 # Prime dynamics, Mertens, and zeta-family zero search
 
+## Current evidence status — corrected 2026-09-16
+
+The historical Phase A/B/C programs completed computations, **not the full
+scientific promotion gates**. Their literal zero handoff counts and the pooled
+phase rejection at `t=37.5` are withdrawn as measured rejection evidence.
+The neighborhood includes the sixth known critical-line ordinate
+`37.58617815882567`. Raw historical artifacts are preserved.
+
+The new `common_spectrum_v2_batch_py3.py` has executed a genuine but limited
+joint prediction screen: `N=10^6,5*10^6`, grids `(512,0),(768,0.08)`, cuts
+`0.55,0.75`, and 199 replicates for each of three coupled shuffle models.
+All **598/598** artifacts completed, with **0 failures and 0 computed screen
+candidates**. This result applies only to this finite `beta=0` model.
+The full protocol remains **INCOMPLETE**, including observation-operator
+injection calibration, full B/C gates, and growth-envelope validation.
+No actual zeta search or Arb/FLINT certification was performed this round.
+
+See [the correction and run ledger](CORRECTION_REPORT_2026-09-16.md),
+[the prospective protocol](COMMON_SPECTRUM_PROTOCOL_V2.md), and
+[the corrected theory note](PHASE_A_THEORY_NOTE.md). Earlier dated entries are
+historical records; this correction takes precedence over incompatible claims.
+
 ## Research objective
 
 We are testing whether anomalies in prime-derived symbolic dynamics can provide
@@ -693,34 +715,39 @@ All outputs remain finite numerical screens or empirical surrogate controls.
 No Mertens, prime-count, Lambda/psi, or short-interval anomaly is an actual
 zeta candidate, and no Arb/FLINT interval certification is claimed.
 
-## 2026-09-15: Phase B short-interval stress batch completed
+## 2026-09-15: Phase B computations completed (interpretation corrected)
 
 The resumable `short_interval_phaseB_batch_py3.py` completed four artifacts at
 `N=10^6` and `5*10^6` for `theta=0.525` and `0.60`, with three held-out cuts,
-two block scales, random/block controls, logarithmic-density-preserving
-surrogates, and block-shuffled gap-preserving surrogates. All four tasks
-completed with zero failures and zero screen or zeta-handoff candidates. The
-outputs are in `runs/short-interval-phaseB-py3/`. This remains a finite
-short-interval/gap stress screen with empirical controls; it provides no zeta
-numerical candidate or Arb/FLINT certification.
+two block scales, random/block controls, and block-shuffled gap-preserving
+surrogates. All four tasks completed with zero reported execution failures.
+The density module was imported but not executed; previous assertions that
+these artifacts included that control were incorrect. Candidate zeroes were
+literal constants, not measured joint-screen outcomes: their scientific status
+is `NOT_EVALUATED`. Raw outputs remain in `runs/short-interval-phaseB-py3/`.
 
-## 2026-09-15: Phase C family-control batch completed
+## 2026-09-15: Phase C computations completed (interpretation corrected)
 
 The resumable `family_phaseC_batch_py3.py` completed four artifacts at
 `N=200,000`: the chi4/chi5 Euler-product fixtures, the Davenport--Heilbronn
 periodic sensitivity fixture, and the exact finite-field curve panel. All
-four tasks completed with zero failures and zero zeta-handoff candidates. The
+four tasks completed with zero reported execution failures. Handoff zeroes
+were literal constants; the joint candidate gate was `NOT_EVALUATED`. The
+chi4/chi5 frequency probes borrowed a zeta ordinate and were not established
+zeros of those character L-functions. Full-window preprocessing prevents
+interpreting the legacy transfer metric as leakage-free prediction. The
 Davenport--Heilbronn row remains an uncertified off-line sensitivity control;
 periodic or finite-field behavior cannot transfer to the Riemann zeta
 function. Outputs are in `runs/family-phaseC-py3/`.
 
-## 2026-09-15: Phase A phase-coherence theory audit
+## 2026-09-15: Phase A phase-coherence audit (rejection inference withdrawn)
 
 Added `phase_concordance_audit_py3.py` and
 `PHASE_A_THEORY_NOTE.md`. Reusing the completed Phase A artifacts, the
-`t=37.5` screen cluster has phase circular resultants `0.614` at `N=10^6` and
-`0.334` at `N=5*10^6`; both observed maxima remain below the largest control
-q95. The cluster is therefore retained only as a finite-window diagnostic.
-The theory note specifies joint shared-frequency regression, continuous-grid
-spread tests, sampling-operator leakage baselines, and surrogate covariance
-multiplicity correction as the next quantitative gates.
+legacy `t=37.5` neighborhood had pooled resultants `0.614` at `N=10^6` and
+`0.334` at `N=5*10^6`. Pooling different channels and different frequencies
+does not test the required phase consistency. The unmatched control q95
+comparison is also not a calibrated rejection test. These rejection inferences
+are withdrawn, and the neighborhood is classified as known-line calibration.
+The corrected audit reports only same-channel, exact-same-frequency descriptive
+groups; it does not reconstruct a missing joint holdout gate from peak lists.

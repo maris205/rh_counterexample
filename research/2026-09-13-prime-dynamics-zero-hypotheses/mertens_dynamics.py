@@ -42,7 +42,7 @@ def log_signal(mu: np.ndarray, samples: int) -> tuple[np.ndarray, np.ndarray]:
     n = len(mu) - 1
     xs = np.unique(np.maximum(2, np.geomspace(2, n, samples).astype(np.int64)))
     cumulative = np.cumsum(mu, dtype=np.int64)
-    m = cumulative[xs - 1]
+    m = cumulative[xs]
     u = np.log(xs.astype(np.float64))
     y = m.astype(np.float64) / np.sqrt(xs.astype(np.float64))
     # Resample on a uniform log grid so FFT frequencies have a direct meaning.

@@ -26,7 +26,8 @@ def score(chans,n,grids,tgrid,window=(37.,38.)):
     vals=[]
     for m,phase in grids:
         for name,a in chans.items():
-            u,y=cumulative_grid(a,n,m,phase,name); rows=demod_scan(u,np.gradient(y,u),tgrid,1)
+            cumulative = np.cumsum(a, dtype=np.float64)
+            u,y=cumulative_grid(cumulative,n,m,phase,name); rows=demod_scan(u,np.gradient(y,u),tgrid,1)
             vals += [r['r2'] for r in rows if window[0]<=r['t']<=window[1]]
     return max(vals) if vals else 0.
 
