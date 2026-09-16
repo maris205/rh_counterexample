@@ -205,7 +205,7 @@ def math_log(x):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--output-dir", type=Path, required=True)
-    ap.add_argument("--profile", choices=("smoke", "validation", "long"), default="validation")
+    ap.add_argument("--profile", choices=("smoke", "validation", "long", "disjoint"), default="validation")
     ap.add_argument("--control-reps", type=int)
     ap.add_argument("--scales")
     ap.add_argument("--max-seconds", type=float, default=14400)
@@ -224,6 +224,10 @@ def main():
     elif args.profile == "long":
         config.update(scales=[1000000, 5000000], grids=[[512, 0.], [768, .08]], control_reps=199,
                       block_size=250000, log_bins=64, t_step=.1)
+    elif args.profile == "disjoint":
+        config.update(scales=[10000000, 30000000], grids=[[192, 0.], [256, .08]],
+                      control_reps=19, block_size=1000000, log_bins=64, x_min=6000000,
+                      t_step=.25)
     if args.control_reps is not None:
         config["control_reps"] = args.control_reps
     if args.scales:
