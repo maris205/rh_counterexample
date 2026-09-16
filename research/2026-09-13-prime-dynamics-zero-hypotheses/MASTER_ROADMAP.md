@@ -43,8 +43,8 @@ channel-specific connection from a genuine zero to the measured statistic.
 More tasks, larger N, or finer frequency grids do not by themselves resolve them.
 
 No new experiment is launched by this roadmap reset. Completed-run monitoring
-stays paused. Select a bounded problem under the new portfolio before running
-another batch. The two tracks below remain a conditional plan for continuing the
+stays paused. The subsequent user-requested first pilot is reported below; select
+a new bounded question before another batch. The two tracks below remain a conditional plan for continuing the
 arithmetic branch, not prerequisites for direct zeta or equivalent-criterion
 search. Neither track's completion substitutes for the other within that branch.
 
@@ -52,6 +52,22 @@ Each round should seek a traceable anomaly or clue and a test that can distingui
 explanations. Follow-up can produce a reproducible candidate, an explained or
 rejected clue, a rigorously scoped exclusion, or a concrete next research question.
 Finite non-detection or budget exhaustion alone does not exclude a direction.
+
+## First bounded run under the numbered roadmap
+
+[A1-PILOT-001](A1_PILOT_001_RESULTS.md) completed 12/12 main tasks, zero failures,
+in 131.38 seconds, after a 2/2 smoke with recovery verification. Starts at
+t=10010,10012,10014 and sigma=.30,.49,.51,.70 were independently refined at
+50 and 80 digits; all endpoints stayed numerically near the critical line and
+all mpmath/FLINT point comparisons agreed. There were four distinct endpoints,
+zero off-line numerical candidates, and no root existence/count certification.
+
+Disposition: **RC:A1 / A1-PILOT-001 / RC:C2 / END**, scoped to this pilot.
+At t=10010, changing the starting real part selected different critical-line
+basins. This is a computational limitation to retain, not an RH anomaly.
+No region has been excluded and no follow-up batch is running. See the
+[research-status register](RESEARCH_STATUS_REGISTER.md) for evidence-linked
+entries suitable for later summary papers.
 
 ## Evidence ledger
 
