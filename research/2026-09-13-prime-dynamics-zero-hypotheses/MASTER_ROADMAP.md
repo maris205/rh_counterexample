@@ -11,6 +11,14 @@ hypotheses are historical, not current scientific acceptance criteria.
 [four-direction visual roadmap](COUNTEREXAMPLE_ROADMAP_2026-09-16.md) is the
 portfolio-level plan: direct zeta search; explicit-formula/arithmetic clues;
 dynamical and spectral representations; and equivalent-criterion violations.
+**The core exploratory task is discovering anomalies and actionable clues.**
+Discovery precedes replication, controls, artifact diagnosis, targeted follow-up,
+and eventual certification. An initial clue may be local, single-channel, or
+model-based: record its source, baseline, effect, and proposed discriminating
+test without prematurely calling it a zeta candidate. The arithmetic handoff
+gates still govern promotion to actual zeta root finding, not whether an early
+observation may be recorded. Scoped exclusions and capability limits are useful
+outcomes of following clues, not replacements for the discovery objective.
 Existing experiments are reference material, not a requirement to keep developing
 their method. A certified violation of an applicable RH-equivalent criterion is
 an independent route and need not first produce an explicit zeta-zero coordinate.
@@ -26,8 +34,9 @@ another batch. The two tracks below remain a conditional plan for continuing the
 arithmetic branch, not prerequisites for direct zeta or equivalent-criterion
 search. Neither track's completion substitutes for the other within that branch.
 
-Each round should seek a reproducible candidate, a rigorously scoped exclusion,
-or a concrete missing bridge/capability boundary that determines the next test.
+Each round should seek a traceable anomaly or clue and a test that can distinguish
+explanations. Follow-up can produce a reproducible candidate, an explained or
+rejected clue, a rigorously scoped exclusion, or a concrete next research question.
 Finite non-detection or budget exhaustion alone does not exclude a direction.
 
 ## Evidence ledger

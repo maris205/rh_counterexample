@@ -1,0 +1,47 @@
+Edit the supplied Chinese RH research roadmap. Preserve its elegant flat ivory background, high-contrast navy typography, four pastel theory-direction cards, line-art illustrations, and overall spacious 3:2 landscape style. This revision has ONE conceptual objective: make DISCOVERING ANOMALIES AND CLUES the visual and scientific center of the roadmap, rather than treating exploration mainly as exclusion or verification. It remains a proposed search strategy, not a claim of any discovery.
+
+Keep main title “RH 反例探索路线图”.
+Replace subtitle with “先发现值得追踪的异常，再把线索推进到严格验证”.
+
+Keep all four upper cards and their theory-name subtitles exactly as in the supplied image:
+“直接 ζ 搜索” / “复分析 · 高精度计算”
+“显式公式与算术” / “素数波动 · Mertens · ψ”
+“动力系统与谱理论” / “转移算子 · 行列式 · 迹公式”
+“RH 等价判据” / “Li 判据 · Robin 不等式”.
+Their final action lines should respectively be:
+“寻找可疑零点”
+“发现算术异常”
+“寻找结构线索”
+“寻找判据异常”.
+Preserve the correct Re(s)=1/2 line icon with three dots ON the line and a hypothetical question mark beside it.
+
+Replace the current thin middle workflow strip with a more prominent central warm gold/ivory outlined band, receiving arrows from ALL FOUR direction cards.
+The large dominant text in this band must be exactly:
+“核心任务：发现异常与线索”
+Below it one short supporting line:
+“谱异常 · 结构偏离 · 意外关联”
+Make this the strongest focal point after the title. It should read as the purpose of the four routes.
+
+Below that central discovery band, add a compact unframed horizontal sequence with arrows:
+“复现与对照 → 排查伪象 → 定向验证”
+This is subordinate to discovery, not another large card.
+
+From that validation sequence, branch sparsely into THREE outcome cards along the lower row. Replace their previous text:
+Left green card:
+Title “形成可靠候选”
+Subtitle “零点 / 等价判据违例”
+Center warm-gray card:
+Title “解释或排除线索”
+Subtitle “识别伪象 · 明确适用范围”
+Right soft-blue card:
+Title “提出下一步问题”
+Subtitle “缺失机制 · 新假设 · 后续检验”
+
+ONLY the left green candidate card has a downward arrow labeled “若严格认证通过” leading to the dark navy goal pill “确认 RH 反例”. The other two outcome cards do NOT connect to confirmed counterexample.
+
+Footer:
+“异常 ≠ 反例     未找到 ≠ 已排除”
+Separate small status label:
+“探索蓝图 · 尚未发现反例”
+
+Use crisp high-contrast Chinese type, ample separation, no arrow crossings. You may slightly reduce the height of upper illustrations to accommodate the central discovery band without making text small. No dark gradients, glows, shadows, transparent background, extra paragraphs, statistics, new formulas or new scientific claims. Preserve overall visual clarity and make discovering clues unmistakably central.
