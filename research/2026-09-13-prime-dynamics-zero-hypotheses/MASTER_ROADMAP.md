@@ -2,6 +2,14 @@
 
 ## Current evidence status — corrected 2026-09-16
 
+Latest diagnostic: [fixed-frequency transfer](EULER_TRANSFER_DIAGNOSTICS.md)
+completed 16/16 new-phase model tasks (3,072 fits), zero failures. With the
+original constant envelope, all-cell positive prediction is 3/16 for the full
+Mertens signal but 16/16 for psi, prime count and short psi. Subtracting the
+known unit-weight model raises Mertens to 15/16; that subtraction is a model
+diagnostic, not an operation available for unknown real-arithmetic signals.
+Envelope changes affect channels differently. The discovery gate is unchanged.
+
 Latest route: [Euler-coupled calibration](EULER_COUPLED_CALIBRATION.md)
 completed 465/465 model tasks, zero numerical failures, following one recovered
 Windows progress-file interruption. All three coefficient families now come

@@ -1,0 +1,443 @@
+{
+  "run_directory": "runs\\euler-transfer-diagnostics-20260916",
+  "manifest": {
+    "schema": "common-spectrum-v2",
+    "configuration": {
+      "scales": [
+        30000,
+        100000
+      ],
+      "grids": [
+        [
+          192,
+          0.0
+        ],
+        [
+          256,
+          0.08
+        ]
+      ],
+      "splits": [
+        0.55,
+        0.75
+      ],
+      "theta": 0.525,
+      "x_min": 100,
+      "frequencies": [
+        18.0,
+        27.0
+      ],
+      "amplitudes": [
+        0.1,
+        0.3
+      ],
+      "phase_seeds": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "betas": [
+        0.0,
+        0.2625,
+        0.5
+      ],
+      "views": [
+        "full",
+        "paired_difference"
+      ],
+      "origin": "log(100)",
+      "scope": "fixed-frequency per-channel model diagnosis; all comparisons reported, no promotion",
+      "envelope_rationale": "0 original; .5 cumulative sqrt-x normalization stress; theta/2 short-window sqrt-h stress. No justified common Mertens envelope assumed.",
+      "paired_baseline": "exact unit-weight reference; not available for unknown signals in real data"
+    },
+    "source_sha256": {
+      "common_spectrum_v2.py": "31d8654f52fc06859b5d4d1f557efd4e1e0b72a3ddc299438d7b8dc55536189f",
+      "common_spectrum_v2_batch_py3.py": "d6b9a0cc71e91a18abc377a51b5c442d2077ac432ea274acab5e4f28ba1f4e59",
+      "known_ordinates.py": "6bce49d51f63453c3b55f9e8fd3c7f94568c5e8bc7bba2b7ed0a6c9280137dea",
+      "mertens_dynamics.py": "ddbc40f45493fe4e7326340f3567e6fb5f20dddf86873cc66aca7f148807f4b3",
+      "lambda_psi_dynamics.py": "0a64fd08a0f3dda6ba6b27787e06bc47c2e53661a0beeb62406c748c03667157",
+      "euler_transfer_diagnostics_py3.py": "7594b7b7b7d5d87063003688f8d2414efbb8b6e6991db5be016ce8ad6f0351d4",
+      "euler_coupled_batch_py3.py": "dfaa6d1c168034684e36084b4ff1da0c1e7352fb28ed8e01d765ec3ec9e4fbde"
+    },
+    "runtime": {
+      "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "C:\\Python314\\python.exe",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "mpmath": "1.4.1",
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "interpretation": "empirical finite joint prediction screen; no mathematical null, zeta roots or interval certification",
+    "run_id": "a4c3ec1648186aa583ea09cf4827348093e83d5b8618196d59b1dfd15c20d2cc"
+  },
+  "summary": {
+    "status": "COMPLETED",
+    "run_id": "a4c3ec1648186aa583ea09cf4827348093e83d5b8618196d59b1dfd15c20d2cc",
+    "configuration": {
+      "scales": [
+        30000,
+        100000
+      ],
+      "grids": [
+        [
+          192,
+          0.0
+        ],
+        [
+          256,
+          0.08
+        ]
+      ],
+      "splits": [
+        0.55,
+        0.75
+      ],
+      "theta": 0.525,
+      "x_min": 100,
+      "frequencies": [
+        18.0,
+        27.0
+      ],
+      "amplitudes": [
+        0.1,
+        0.3
+      ],
+      "phase_seeds": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "betas": [
+        0.0,
+        0.2625,
+        0.5
+      ],
+      "views": [
+        "full",
+        "paired_difference"
+      ],
+      "origin": "log(100)",
+      "scope": "fixed-frequency per-channel model diagnosis; all comparisons reported, no promotion",
+      "envelope_rationale": "0 original; .5 cumulative sqrt-x normalization stress; theta/2 short-window sqrt-h stress. No justified common Mertens envelope assumed.",
+      "paired_baseline": "exact unit-weight reference; not available for unknown signals in real data"
+    },
+    "completed_count": 16,
+    "failed_count": 0,
+    "total_tasks": 16,
+    "aggregate": [
+      {
+        "view": "full",
+        "channel": "mertens",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 80,
+        "designs": 16,
+        "positive_all_cells_designs": 3,
+        "median_gain": 0.02101207481844961,
+        "median_train_gain": 0.014049355536290211
+      },
+      {
+        "view": "full",
+        "channel": "mertens",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 68,
+        "designs": 16,
+        "positive_all_cells_designs": 2,
+        "median_gain": 0.009707751491643457,
+        "median_train_gain": 0.01854022140602558
+      },
+      {
+        "view": "full",
+        "channel": "mertens",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 42,
+        "designs": 16,
+        "positive_all_cells_designs": 0,
+        "median_gain": -0.06317136781223162,
+        "median_train_gain": 0.024252496692688447
+      },
+      {
+        "view": "full",
+        "channel": "psi",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.35396503997613166,
+        "median_train_gain": 0.3349882867643913
+      },
+      {
+        "view": "full",
+        "channel": "psi",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.6705875714052497,
+        "median_train_gain": 0.4241084221310898
+      },
+      {
+        "view": "full",
+        "channel": "psi",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.8463550142255354,
+        "median_train_gain": 0.443400367996172
+      },
+      {
+        "view": "full",
+        "channel": "prime_count",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.3493931640157443,
+        "median_train_gain": 0.3190186383996313
+      },
+      {
+        "view": "full",
+        "channel": "prime_count",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.6483357708594049,
+        "median_train_gain": 0.39279272539918786
+      },
+      {
+        "view": "full",
+        "channel": "prime_count",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.8319162772849986,
+        "median_train_gain": 0.40855147437719574
+      },
+      {
+        "view": "full",
+        "channel": "short_psi",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.2718149930100631,
+        "median_train_gain": 0.20330193816916114
+      },
+      {
+        "view": "full",
+        "channel": "short_psi",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 126,
+        "designs": 16,
+        "positive_all_cells_designs": 14,
+        "median_gain": 0.38178415670468957,
+        "median_train_gain": 0.23728815403931286
+      },
+      {
+        "view": "full",
+        "channel": "short_psi",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 99,
+        "designs": 16,
+        "positive_all_cells_designs": 3,
+        "median_gain": 0.1891852962612739,
+        "median_train_gain": 0.24755125404828493
+      },
+      {
+        "view": "paired_difference",
+        "channel": "mertens",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 127,
+        "designs": 16,
+        "positive_all_cells_designs": 15,
+        "median_gain": 0.28770633805302886,
+        "median_train_gain": 0.2743095768947092
+      },
+      {
+        "view": "paired_difference",
+        "channel": "mertens",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.4931658272257129,
+        "median_train_gain": 0.3299309746581962
+      },
+      {
+        "view": "paired_difference",
+        "channel": "mertens",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 126,
+        "designs": 16,
+        "positive_all_cells_designs": 14,
+        "median_gain": 0.5004766823751765,
+        "median_train_gain": 0.33207853341179894
+      },
+      {
+        "view": "paired_difference",
+        "channel": "psi",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.39216938188887895,
+        "median_train_gain": 0.6744026670119481
+      },
+      {
+        "view": "paired_difference",
+        "channel": "psi",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.7846156064806283,
+        "median_train_gain": 0.8456085475782643
+      },
+      {
+        "view": "paired_difference",
+        "channel": "psi",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.9797327554981923,
+        "median_train_gain": 0.8770353486929923
+      },
+      {
+        "view": "paired_difference",
+        "channel": "prime_count",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.3971008105692791,
+        "median_train_gain": 0.6907308012052377
+      },
+      {
+        "view": "paired_difference",
+        "channel": "prime_count",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.7905950162638087,
+        "median_train_gain": 0.8606823125656791
+      },
+      {
+        "view": "paired_difference",
+        "channel": "prime_count",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.9849796292348507,
+        "median_train_gain": 0.9006212768473931
+      },
+      {
+        "view": "paired_difference",
+        "channel": "short_psi",
+        "beta": 0.0,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.6033885902441566,
+        "median_train_gain": 0.7926834001793991
+      },
+      {
+        "view": "paired_difference",
+        "channel": "short_psi",
+        "beta": 0.2625,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 128,
+        "designs": 16,
+        "positive_all_cells_designs": 16,
+        "median_gain": 0.8948738302795779,
+        "median_train_gain": 0.8899717119923419
+      },
+      {
+        "view": "paired_difference",
+        "channel": "short_psi",
+        "beta": 0.5,
+        "valid_cells": 128,
+        "invalid_cells": 0,
+        "positive_cells": 117,
+        "designs": 16,
+        "positive_all_cells_designs": 5,
+        "median_gain": 0.6007301346277962,
+        "median_train_gain": 0.8735483474930523
+      }
+    ],
+    "candidate_count": null,
+    "gate_status": "DIAGNOSTIC_ONLY",
+    "interpretation": "New phases on previously used arithmetic scales, not independent arithmetic replication. Frequencies and envelopes are supplied calibration parameters. Paired differences need a known model reference. No controls, discovery p-values, actual zeta search or interval certification in this diagnostic."
+  },
+  "fit_records": 3072,
+  "summary_sha256": "5e0a6f883baf195066aa34f760ef91baff38b1e3f4ff7a529358dffcac25f4b8",
+  "task_sha256": {
+    "task-t18-a0.1-seed2.json": "d39a1d4d519e807781d27eb4bf855e106441e231c43326bfab72186360452718",
+    "task-t18-a0.1-seed3.json": "0ddbc9058ffe8f6608b95a28122b904d8fbc146be842a62b1a9664017fa37198",
+    "task-t18-a0.1-seed4.json": "5b5df1a4818169f1e3b96acf3faa3944750f19dcdaa2d0310c953ff7b370d9d0",
+    "task-t18-a0.1-seed5.json": "446f00823ebbc953d47b85098c4346d7877c88313aa690d0cc72c29558d69f0f",
+    "task-t18-a0.3-seed2.json": "8b79c5eb5a2655dd35022bf5bdf99a63594edfd1c1513d9d53b252418cc4945d",
+    "task-t18-a0.3-seed3.json": "1db6537c53e75bfe5923ee249ff63c19d66417aaf8ff83fb9db7c86fe3738742",
+    "task-t18-a0.3-seed4.json": "6352666b45e695c1e26e57bc8333bd8c88b1809aacc8c4c50ebc46a11c3dd188",
+    "task-t18-a0.3-seed5.json": "a35f07001bae7d9c88c6eaa0d893f2d5c7837130d1e36bf51821d40a786ed511",
+    "task-t27-a0.1-seed2.json": "479424578212391af74dbf3c142a83d1c2e10c277a4dcfb6fe51976fe4e91dc3",
+    "task-t27-a0.1-seed3.json": "fd85c738dac209421630a95ad670d14ffa7de0c7c70377e0e4d9980b9d28dbeb",
+    "task-t27-a0.1-seed4.json": "a296137d7bc9a1dd8f72672556b6520af0eaf6f25f3b81ae3c27ebe46a43be78",
+    "task-t27-a0.1-seed5.json": "05a81f5da855f4d8119ac386e1c46c20d47cb9e1c3f23a888197a3c018ab2a27",
+    "task-t27-a0.3-seed2.json": "726031310d876aaa8e4865d8946f5ba3d948a399ba2cb31b9b6367a8141f186f",
+    "task-t27-a0.3-seed3.json": "54099c375a92eaf0c0f1289abb749bb58f10bdbecf9718999b124914fd28373b",
+    "task-t27-a0.3-seed4.json": "ba1059e7b7a8ceec1a5cd2942d8c814fae213d0b276a18f0e7fbe4303e0f7734",
+    "task-t27-a0.3-seed5.json": "14bfed21106437147e0c7361339d95875697181dea7ab2c4de0cb2bb8e815590"
+  }
+}
