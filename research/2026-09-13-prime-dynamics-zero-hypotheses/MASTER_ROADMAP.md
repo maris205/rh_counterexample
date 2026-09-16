@@ -7,19 +7,28 @@ hypotheses are historical, not current scientific acceptance criteria.
 
 ## Objective and present decision
 
-Investigate whether arithmetic observables can provide useful, validated search
-coordinates for an actual off-critical-line zeta zero. Finding oscillations in
-arithmetic data or recovering injected model modulation is not that result.
+**The objective is a rigorously confirmed RH counterexample.** The current
+[four-direction visual roadmap](COUNTEREXAMPLE_ROADMAP_2026-09-16.md) is the
+portfolio-level plan: direct zeta search; explicit-formula/arithmetic clues;
+dynamical and spectral representations; and equivalent-criterion violations.
+Existing experiments are reference material, not a requirement to keep developing
+their method. A certified violation of an applicable RH-equivalent criterion is
+an independent route and need not first produce an explicit zeta-zero coordinate.
 
-**The project is presently validating its measurement method.** The bottlenecks
+**The existing arithmetic branch is validating its measurement method.** Its bottlenecks
 are unknown-frequency sensitivity, background separation, and the missing
 channel-specific connection from a genuine zero to the measured statistic.
 More tasks, larger N, or finer frequency grids do not by themselves resolve them.
 
 No new experiment is launched by this roadmap reset. Completed-run monitoring
-stays paused. Next work has two bounded parallel tracks: analytic identification
-and one prospectively frozen confirmation of the best current model calibration.
-Neither track's completion substitutes for the other.
+stays paused. Select a bounded problem under the new portfolio before running
+another batch. The two tracks below remain a conditional plan for continuing the
+arithmetic branch, not prerequisites for direct zeta or equivalent-criterion
+search. Neither track's completion substitutes for the other within that branch.
+
+Each round should seek a reproducible candidate, a rigorously scoped exclusion,
+or a concrete missing bridge/capability boundary that determines the next test.
+Finite non-detection or budget exhaustion alone does not exclude a direction.
 
 ## Evidence ledger
 
@@ -62,7 +71,7 @@ See [background report](EULER_TRAIN_ONLY_BACKGROUND.md),
   particular, a common envelope across cumulative and short-interval operators
   must not be assumed when converting a fitted growth rate into sigma.
 
-## Track T: establish what the instrument should measure
+## Arithmetic branch, Track T: establish what the instrument should measure
 
 Deliver a channel-by-channel transfer note before interpreting model power as
 zero-detection power. For Mertens, psi, prime count, and short intervals, specify:
@@ -83,10 +92,10 @@ prediction without supplying the target frequency to nomination. If this bridge
 cannot be justified, retain the detector only as an exploratory arithmetic
 statistic; do not present it as a validated guide to off-line zeros.
 
-## Track E: one bounded confirmation of background calibration
+## Arithmetic branch, Track E: one bounded confirmation of background calibration
 
-The training-only known-line nuisance model is the sole current confirmation
-candidate. Freeze its source hash, frequency search, nuisance basis, holdout
+If this branch is selected, the training-only known-line nuisance model is its
+sole current confirmation candidate. Freeze its source hash, frequency search, nuisance basis, holdout
 rules, control statistic, and acceptance criteria before generating new results.
 
 Design requirements for the next protocol, not an already-running batch:
@@ -114,7 +123,7 @@ results treated as development data.
 Even success accepts only a bounded model-calibration claim. Track T is still
 required before an actual arithmetic result can be interpreted as zero-related.
 
-## Subsequent gates
+## Subsequent gates for the arithmetic-guided zero-search branch
 
 | Gate | Prerequisite and action | Permitted conclusion |
 | --- | --- | --- |
@@ -124,9 +133,12 @@ required before an actual arithmetic result can be interpreted as zero-related.
 | G4: interval certification | Establish an off-line region with certified boundary conditions and a rigorous zero count using Arb/FLINT | A rigorous claim only if the certification actually succeeds |
 
 A separately justified direct zeta search does not logically require the model
-calibration route. It is parked for now: the historical finite scans have no
-candidate, and this reset supplies no new targeted search region. Do not repeat
-completed windows merely to keep a long process running.
+calibration route. It is the direct-search main line in the macro roadmap, but
+no new search region or batch has been scheduled here. Historical finite scans
+have no candidate. Do not repeat completed windows merely to keep a long process
+running. The dynamical/spectral branch needs a proved connection to the actual
+target before its model zeros can support zeta claims. Equivalent-criterion
+work instead requires exact theorem hypotheses and rigorous violation bounds.
 
 ## Work deliberately deferred
 

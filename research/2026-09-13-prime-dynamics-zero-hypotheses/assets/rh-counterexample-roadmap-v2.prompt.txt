@@ -1,0 +1,56 @@
+Use case: infographic-diagram.
+Create ONE polished, simple, high-resolution Simplified Chinese infographic, landscape 3:2 composition, for a serious mathematics research project. It should be easy for a non-specialist collaborator to read at a glance. Not a dense technical poster. Warm ivory background, midnight navy title, restrained soft teal / blue / lavender / amber highlights, elegant large Chinese typography, subtle fine-line science illustrations, generous whitespace. No photographs, no 3D, no dense formulas, no success metrics. All diagram arrows have a clear direction and never cross. Large short labels; do not add explanatory paragraphs.
+
+Exact main title: “RH 反例探索路线图”
+Exact subtitle: “以反例为目标，让每轮探索留下可复用的结论”
+
+LAYOUT:
+At the top, beneath the title, FOUR balanced vertical direction cards across the width, each with a discreet original mathematical line illustration and three exact text lines. Make card titles prominent and subtitles smaller but easily legible.
+
+Card 1, navy/blue, small schematic complex plane icon:
+“直接 ζ 搜索”
+“复分析 · 高精度计算”
+“寻找线外零点”
+
+Card 2, teal, small prime dots and oscillatory wave icon:
+“显式公式与算术”
+“素数波动 · Mertens · ψ”
+“提供定位线索”
+
+Card 3, lavender, small orbit loop and operator grid icon:
+“动力系统与谱理论”
+“转移算子 · 行列式 · 迹公式”
+“探索新的解析表示”
+
+Card 4, amber, small balanced inequality icon:
+“RH 等价判据”
+“Li 判据 · Robin 不等式”
+“寻找严格违例”
+
+These four cards represent exploration options, not completed theories or proven connections to zeta. Thin lines from all four cards merge into ONE calm horizontal middle strip. Exact middle-strip text:
+“限定问题  →  预设检验  →  验证与复核”
+
+Below the middle strip, THREE outcome cards arranged in an evenly spaced row, with clear downward connectors. This bottom area is crucial: value is not limited to success.
+
+Outcome 1, restrained green:
+Title “发现候选”
+Subtitle “零点 / 等价判据违例”
+From this card only, a downward arrow labeled “若严格认证通过”, leading to a modest dark-navy final goal pill “确认 RH 反例”.
+This is a conditional destination, not a claimed result.
+
+Outcome 2, warm gray:
+Title “排除具体构造”
+Subtitle “证明不适用或不可能”
+Third line “仅限声明范围”
+Do NOT connect this card to “确认 RH 反例”. It records a scoped negative result, not a disproof of RH.
+
+Outcome 3, soft blue:
+Title “明确下一步”
+Subtitle “缺失连接 · 能力边界 · 新问题”
+Do NOT connect this to “确认 RH 反例”. It records actionable research knowledge.
+
+Place a small elegant footnote on the bottom margin, exact text:
+“未找到 ≠ 已排除     模型异常 ≠ ζ 零点”
+Also a subtle small label “探索蓝图 · 尚未发现反例”.
+
+Make hierarchy clean and sophisticated, with the four methods and three useful outcomes immediately obvious. Leave enough bottom whitespace to keep the conditional final goal and footnotes separate. Use only the quoted visible text, plus tiny conceptual illustration marks where necessary. Spelling of all Chinese labels must be exact. Do not depict any actual off-line zero as an established fact. Do not add workflow governance or budget details.
