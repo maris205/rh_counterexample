@@ -2,6 +2,16 @@
 
 ## Current evidence status — corrected 2026-09-16
 
+Latest experiment: [training-only known-line background](EULER_TRAIN_ONLY_BACKGROUND.md)
+completed 1,393/1,393 model tasks, zero failures. Under the frozen nuisance
+model, epsilon=.3 neighborhood recovery rises from the original model's
+1/8 to 8/8, with 5/8 designs satisfying positive predictions and all three
+within-design descriptive control ranks. Epsilon=.03/.1 has no passes.
+Ranks are all at the B=19 floor .05 and some gains are marginal. This is
+promising model calibration only: candidate count null, actual-arithmetic
+discovery model unchanged, no actual zeta search or interval certification.
+Confirmation requires new phases and a larger fixed control budget.
+
 Latest diagnostic: [frequency localization versus background](EULER_FREQUENCY_LOCALIZATION.md)
 completed 16/16 new-phase tasks, zero failures. A tenfold finer frequency
 grid (.25 to .025) produced no all-positive nomination on full model data
