@@ -2,6 +2,15 @@
 
 ## Current evidence status — corrected 2026-09-16
 
+Latest diagnostic: [frequency localization versus background](EULER_FREQUENCY_LOCALIZATION.md)
+completed 16/16 new-phase tasks, zero failures. A tenfold finer frequency
+grid (.25 to .025) produced no all-positive nomination on full model data
+for either frozen model. Paired known-reference subtraction improves the
+constant model's coarse-grid neighborhood recovery from 0/16 to 16/16, but
+is an oracle diagnostic, not a deployable arithmetic procedure. The evidence
+favors investigating non-oracle background modeling before finer scans;
+discovery thresholds remain unchanged and candidate count is null.
+
 Latest comparison: [frozen channel envelopes](EULER_ENVELOPE_COMPARISON.md)
 completed 929/929 model tasks, zero failures, on phase seeds 6--9. Both the
 original and channel-envelope models nominate within .25 of modulation t in
