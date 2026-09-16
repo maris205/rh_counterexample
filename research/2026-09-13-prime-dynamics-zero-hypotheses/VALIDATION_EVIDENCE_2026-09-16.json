@@ -10455,6 +10455,153 @@
         "interpretation": "empirical finite joint prediction screen; no mathematical null, zeta roots or interval certification",
         "run_id": "6963fdd0d34846ea02966e52dc4ee59252461d8d7f915106218f9ae6b3d471bf"
       }
+    },
+    "phaseC-unknown-frequency-20260916": {
+      "raw_summary_sha256": "7ed7567c09f64ac4a32fb97972bbdf8a19aa3c8de61bf5e26985400ee4ce8389",
+      "summary": {
+        "schema": "phaseC-unknown-frequency-v1",
+        "status": "COMPLETED",
+        "run_id": "2f3604cb065482454ae7e16626fba66a5b8b4d759157ac4673aaa648b7991331",
+        "configuration": {
+          "families": [
+            "dh",
+            "chi4",
+            "chi5"
+          ],
+          "n": 200000,
+          "samples": 1024,
+          "cuts": [
+            0.55,
+            0.75
+          ],
+          "control_reps": 19,
+          "block_size": 5000,
+          "t_min": 4.0,
+          "t_max": 100.0,
+          "t_step": 0.25,
+          "top_k": 3,
+          "seed": 20260916,
+          "scope": "periodic-family detector transfer; no zeta inference"
+        },
+        "completed_count": 117,
+        "failed_count": 0,
+        "total_tasks": 117,
+        "rows": [
+          {
+            "family": "dh",
+            "target_t": 85.6993484853776,
+            "target_recovered": false,
+            "control": "global",
+            "observed_max_statistic": -18.665314419521213,
+            "empirical_rank_p": 1.0,
+            "replicates": 19,
+            "scan_adjusted": true
+          },
+          {
+            "family": "dh",
+            "target_t": 85.6993484853776,
+            "target_recovered": false,
+            "control": "block",
+            "observed_max_statistic": -18.665314419521213,
+            "empirical_rank_p": 1.0,
+            "replicates": 19,
+            "scan_adjusted": true
+          },
+          {
+            "family": "chi4",
+            "target_t": 14.1347251417347,
+            "target_recovered": false,
+            "control": "global",
+            "observed_max_statistic": -4.150906478862713,
+            "empirical_rank_p": 1.0,
+            "replicates": 19,
+            "scan_adjusted": true
+          },
+          {
+            "family": "chi4",
+            "target_t": 14.1347251417347,
+            "target_recovered": false,
+            "control": "block",
+            "observed_max_statistic": -4.150906478862713,
+            "empirical_rank_p": 1.0,
+            "replicates": 19,
+            "scan_adjusted": true
+          },
+          {
+            "family": "chi5",
+            "target_t": 14.1347251417347,
+            "target_recovered": false,
+            "control": "global",
+            "observed_max_statistic": -6.371169157480417,
+            "empirical_rank_p": 1.0,
+            "replicates": 19,
+            "scan_adjusted": true
+          },
+          {
+            "family": "chi5",
+            "target_t": 14.1347251417347,
+            "target_recovered": false,
+            "control": "block",
+            "observed_max_statistic": -6.371169157480417,
+            "empirical_rank_p": 1.0,
+            "replicates": 19,
+            "scan_adjusted": true
+          }
+        ],
+        "candidate_count": null,
+        "gate_status": "NOT_EVALUATED",
+        "full_protocol_status": "INCOMPLETE",
+        "interpretation": "This is a detector transfer calibration on periodic family fixtures. Each surrogate repeats unknown-frequency selection and frozen holdout scoring. It is not an actual zeta search, family-zero certification, or evidence that a family fixture transfers to zeta.",
+        "missing_gates": [
+          "certified family targets",
+          "cross-channel arithmetic joint gate",
+          "actual zeta evaluation",
+          "Arb/FLINT certification"
+        ]
+      },
+      "manifest": {
+        "schema": "common-spectrum-v2",
+        "configuration": {
+          "families": [
+            "dh",
+            "chi4",
+            "chi5"
+          ],
+          "n": 200000,
+          "samples": 1024,
+          "cuts": [
+            0.55,
+            0.75
+          ],
+          "control_reps": 19,
+          "block_size": 5000,
+          "t_min": 4.0,
+          "t_max": 100.0,
+          "t_step": 0.25,
+          "top_k": 3,
+          "seed": 20260916,
+          "scope": "periodic-family detector transfer; no zeta inference"
+        },
+        "source_sha256": {
+          "common_spectrum_v2.py": "31d8654f52fc06859b5d4d1f557efd4e1e0b72a3ddc299438d7b8dc55536189f",
+          "common_spectrum_v2_batch_py3.py": "d6b9a0cc71e91a18abc377a51b5c442d2077ac432ea274acab5e4f28ba1f4e59",
+          "known_ordinates.py": "6bce49d51f63453c3b55f9e8fd3c7f94568c5e8bc7bba2b7ed0a6c9280137dea",
+          "mertens_dynamics.py": "ddbc40f45493fe4e7326340f3567e6fb5f20dddf86873cc66aca7f148807f4b3",
+          "lambda_psi_dynamics.py": "0a64fd08a0f3dda6ba6b27787e06bc47c2e53661a0beeb62406c748c03667157",
+          "phaseC_unknown_frequency_py3.py": "43619438586277546716b75362d332b07275c8d37aaee885eb1ccb002ae6353a",
+          "family_detector_transfer.py": "ffce0ac38c2a9fedefca8ec06469ec812b71d1b5e3fcfd18934f9b51b8131bf6"
+        },
+        "runtime": {
+          "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+          "executable": "C:\\Python314\\python.exe",
+          "numpy": "2.5.3",
+          "scipy": "1.18.1",
+          "mpmath": "1.4.1",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "interpretation": "empirical finite joint prediction screen; no mathematical null, zeta roots or interval certification",
+        "run_id": "2f3604cb065482454ae7e16626fba66a5b8b4d759157ac4673aaa648b7991331"
+      }
     }
   }
 }

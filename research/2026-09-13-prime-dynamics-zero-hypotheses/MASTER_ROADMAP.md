@@ -47,6 +47,13 @@ replicates per control and returned 0 candidates. Its selected minima were
 INCOMPLETE because Phase C and prime-consistent three-family injection gates
 are still open.
 
+The Phase C unknown-frequency transfer calibration completed 117/117 tasks
+with 0 failures in `runs/phaseC-unknown-frequency-20260916/`: DH, chi4 and
+chi5 fixtures, each with 19 global and 19 block surrogate repetitions. The
+unknown-frequency selector recovered none of the fixture target frequencies;
+all six empirical ranks were 1. This is a detector-power limitation for these
+fixtures, not evidence about the corresponding L-functions or zeta.
+
 See [the correction and run ledger](CORRECTION_REPORT_2026-09-16.md),
 [the prospective protocol](COMMON_SPECTRUM_PROTOCOL_V2.md), and
 [the corrected theory note](PHASE_A_THEORY_NOTE.md). Earlier dated entries are

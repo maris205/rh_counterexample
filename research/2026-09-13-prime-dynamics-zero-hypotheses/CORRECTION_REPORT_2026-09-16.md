@@ -159,6 +159,15 @@ was held fixed. The known-line calibration was discovery-excluded. This is a
 local prime-operator diagnostic, not an arithmetic null or a three-family
 candidate procedure.
 
+The Phase C unknown-frequency transfer run at
+`runs/phaseC-unknown-frequency-20260916/` completed 117/117 tasks with zero
+failures. It selected unknown frequencies on the DH, chi4 and chi5 periodic
+fixtures, repeated the selection in 19 global and 19 block surrogates, and
+then evaluated frozen held-out gains. None of the three fixture target
+frequencies was recovered; all six empirical rank values were 1. This is a
+negative detector-sensitivity result. It does not certify the fixture zeros,
+disprove them, or transfer anything to the Riemann zeta function.
+
 ## Runtime and verification
 
 `py -3.10` is unavailable on this host. Actual execution used `py -3.14`,
