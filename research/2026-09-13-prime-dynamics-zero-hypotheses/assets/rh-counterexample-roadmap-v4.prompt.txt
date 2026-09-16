@@ -1,0 +1,28 @@
+Edit the supplied Chinese RH research roadmap image. Make only a precise labeling revision: add stable, readable location IDs to EVERY method, discovery step, validation step, outcome, and certification endpoint. Preserve the existing elegant ivory background, pastel cards, navy typography, conceptual illustrations, four-column upper layout, arrows, content, and central emphasis on discovering anomalies and clues. Do not add completion indicators, checkmarks, progress bars, new scientific claims or results. These IDs are addresses, not progress or scientific gate passes.
+
+Keep main title and subtitle unchanged.
+Add a compact tasteful navy-text ID badge inside the upper-left corner of each top card, leaving its title and illustration unobscured:
+A1 — the existing “直接 ζ 搜索” card.
+A2 — the existing “显式公式与算术” card.
+A3 — the existing “动力系统与谱理论” card.
+A4 — the existing “RH 等价判据” card.
+Retain their original theory subtitles and action lines.
+
+Add B1 to the central gold discovery band. Its prominent heading should read:
+“B1  核心任务：发现异常与线索”
+Keep the smaller line “谱异常 · 结构偏离 · 意外关联”. Preserve the lightbulb icon if space allows, but never reduce text readability.
+
+The three compact validation steps beneath this band must read exactly, left to right:
+“C1 复现与对照 → C2 排查伪象 → C3 定向验证”
+Give each step sufficient spacing, retaining the simple linear sequence.
+
+Add a compact upper-left ID badge inside each lower outcome card, without obscuring its icon or text:
+D1 — “形成可靠候选”, keeping subtitle “零点 / 等价判据违例”.
+D2 — “解释或排除线索”, keeping subtitle “识别伪象 · 明确适用范围”.
+D3 — “提出下一步问题”, keeping subtitle “缺失机制 · 新假设 · 后续检验”.
+
+The D1 branch alone goes down to certification. Replace the old arrow annotation “若严格认证通过” with a small clear step labeled “E1 严格认证”. Then put “通过” beside the arrow leading to the existing dark-navy goal pill. That final pill should now read “E2 确认 RH 反例”. Keep the conditional nature explicit: E1 certification must pass before E2. D2 and D3 do NOT connect to E2.
+
+Retain the footer “异常 ≠ 反例     未找到 ≠ 已排除” and “探索蓝图 · 尚未发现反例”.
+Keep all text crisp and exact. The 13 IDs must each appear exactly once as node identifiers: A1 A2 A3 A4 B1 C1 C2 C3 D1 D2 D3 E1 E2. Never substitute any code for another, never duplicate them, and do not use any other IDs.
+If necessary, add a little vertical space below the outcome cards for E1 and E2, while preserving the original landscape balance and comfortable whitespace. Avoid dark backgrounds, oversized badges, ornament, gradients, and clutter.

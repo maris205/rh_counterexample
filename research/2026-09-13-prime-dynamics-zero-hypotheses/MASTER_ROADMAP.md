@@ -12,6 +12,12 @@ hypotheses are historical, not current scientific acceptance criteria.
 portfolio-level plan: direct zeta search; explicit-formula/arithmetic clues;
 dynamical and spectral representations; and equivalent-criterion violations.
 **The core exploratory task is discovering anomalies and actionable clues.**
+The visual roadmap now has stable location IDs: A1–A4 for directions, B1 for
+discovery, C1–C3 for follow-up, D1–D3 for outcomes, and E1–E2 for certification
+and confirmation. Use the prefix `RC:` when ambiguity is possible. These are
+not the manuscript's Hilbert–Pólya gates or historical Phase A/B/C labels.
+Track each clue's direction, current location, status, evidence, and next test
+separately; a location ID does not assert that its validation has passed.
 Discovery precedes replication, controls, artifact diagnosis, targeted follow-up,
 and eventual certification. An initial clue may be local, single-channel, or
 model-based: record its source, baseline, effect, and proposed discriminating

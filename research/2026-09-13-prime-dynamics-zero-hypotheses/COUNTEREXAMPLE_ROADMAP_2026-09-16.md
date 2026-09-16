@@ -2,7 +2,33 @@
 
 2026-09-16。最终目标是找到并严格确认 RH 反例；当前探索的核心任务是发现值得追踪的异常与线索。既有实验与证明探索作为参考，不决定必须沿用的路线。本图是探索方案，不是已完成的理论链条，也不启动新实验。
 
-![以发现异常与线索为核心的 RH 反例探索路线图](assets/rh-counterexample-roadmap-v3.png)
+![带固定位置编号的 RH 反例探索路线图](assets/rh-counterexample-roadmap-v4.png)
+
+## 固定位置编号
+
+编号表示研究位置，不表示完成状态、数学结论强度或整个项目的完成比例。同一方向可以有多条线索，分别处于不同位置。完整引用前缀为 `RC:`，图中省略前缀以保持简洁；例如 `RC:A1`。这些编号与 `manuscript-v1.pdf` 的 Hilbert–Pólya A0/A1/B1 等理论门槛，以及旧实验 Phase A/B/C、G1–G4 均属不同体系，不可直接换算或继承结论。
+
+| 编号 | 对应位置 |
+| --- | --- |
+| A1 | 直接 ζ 搜索 |
+| A2 | 显式公式与算术 |
+| A3 | 动力系统与谱理论 |
+| A4 | RH 等价判据 |
+| B1 | 发现异常与线索（核心任务） |
+| C1 | 复现与对照 |
+| C2 | 排查伪象 |
+| C3 | 定向验证 |
+| D1 | 形成可靠候选（仍未认证） |
+| D2 | 解释或排除线索 |
+| D3 | 提出下一步问题 |
+| E1 | 严格认证 |
+| E2 | 确认 RH 反例（仅在认证通过后） |
+
+后续记录采用：`方向编号｜线索编号｜当前位置｜状态｜证据｜下一步检验`。例如 `A2｜CL-示例｜C1｜待复核｜证据路径｜换网格复现`，只是格式示例，不代表已有新线索。
+
+状态另记为“待开展 / 进行中 / 待复核 / 暂停 / 已结束”，并独立记录结果。到达 C1 不等于通过 C1；一个批次结束不等于对应方向研究完成。E1 正在进行不等于 E2 已成立。C1–C3 可以往返，D3 也可产生新的 B1 线索，图仅压缩显示主要流程。
+
+编号从本版起固定：新增细分内容使用 `A2.1`、`C1.1` 等子编号，不因图形重排改变旧编号。本轮只增加编号，不将历史批次自动标成通过，也未启动新研究运行。
 
 ## 核心过程：发现线索，再逐步验证
 
@@ -41,9 +67,10 @@
 
 ## 图像来源
 
-- 使用内置 imagegen 生成并编辑；v3 在 v2 基础上将发现异常与线索突出为核心任务；未改动原 PDF。
-- [v3 完整编辑提示词](assets/rh-counterexample-roadmap-v3.prompt.txt)。
-- v3 PNG SHA-256：`02c79da6d33200e124fa63886833a5cd4fd8f2eea6f6d2c98e5790fb18fc7371`。
+- 使用内置 imagegen 生成并编辑；v4 在 v3 基础上添加固定位置编号，保留发现异常与线索的核心地位；未改动原 PDF。
+- [v4 完整编辑提示词](assets/rh-counterexample-roadmap-v4.prompt.txt)。
+- v4 PNG SHA-256：`9ed4da935561ccce94471b0c31dd070e65f9a6d06055b96ac47d79baf8d9a42b`。
+- 历史 v3 的[提示词](assets/rh-counterexample-roadmap-v3.prompt.txt)和[图片](assets/rh-counterexample-roadmap-v3.png)保留；其 PNG SHA-256 为 `02c79da6d33200e124fa63886833a5cd4fd8f2eea6f6d2c98e5790fb18fc7371`。
 - 历史 v2 的[初始生成提示词](assets/rh-counterexample-roadmap-v2.prompt.txt)、[可读性修订提示词](assets/rh-counterexample-roadmap-v2.edit-prompt.txt)和[图片](assets/rh-counterexample-roadmap-v2.png)保留供追溯。
 - 图仅表示方向与判断流程；底层证据仍以原始证明、数据和认证记录为准。
 
