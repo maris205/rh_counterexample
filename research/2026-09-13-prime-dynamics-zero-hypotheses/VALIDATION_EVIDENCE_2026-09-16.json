@@ -4911,6 +4911,275 @@
         },
         "sha256": "77d742d4b29d25ddf359e1b749bc5778ef92d9fa386cd5397d437dee200a8e44"
       }
+    },
+    "common-spectrum-operator-power-20260916": {
+      "raw_summary_sha256": "c8ff9caa16a50efe8409577da357c4eef9902a68d631605df6ca204886591a1c",
+      "summary": {
+        "schema": "common-spectrum-operator-power-v1",
+        "status": "COMPLETED",
+        "run_id": "998bae4d5f8807350c1555ea58850675f909e915da71063187f15ed2762e8a1a",
+        "configuration": {
+          "scales": [
+            100000,
+            300000
+          ],
+          "grids": [
+            [
+              192,
+              0.0
+            ],
+            [
+              256,
+              0.08
+            ]
+          ],
+          "splits": [
+            0.55,
+            0.75
+          ],
+          "theta": 0.525,
+          "x_min": 100,
+          "frequencies": [
+            18.0,
+            37.58617815882567
+          ],
+          "betas": [
+            0.0,
+            0.05
+          ],
+          "amplitudes": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "phase_seeds": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "scan_min": 4.0,
+          "scan_max": 40.0,
+          "scan_step": 0.25,
+          "known_margin": 0.35,
+          "top_k": 3,
+          "origin": "log(100)",
+          "scope": "pre-observation coefficient injection; synthetic operator calibration only"
+        },
+        "known_ordinates": [
+          14.134725141734695,
+          21.022039638771556,
+          25.01085758014569,
+          30.424876125859512,
+          32.93506158773919,
+          37.586178158825675,
+          40.9187190121475
+        ],
+        "completed_count": 49,
+        "failed_count": 0,
+        "total_tasks": 49,
+        "curves": [
+          {
+            "t": 18.0,
+            "beta": 0.0,
+            "amplitude": 0.5,
+            "trials": 4,
+            "discovery_recovery": 4,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 18.0,
+            "beta": 0.0,
+            "amplitude": 1.0,
+            "trials": 4,
+            "discovery_recovery": 4,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 18.0,
+            "beta": 0.0,
+            "amplitude": 2.0,
+            "trials": 4,
+            "discovery_recovery": 4,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 18.0,
+            "beta": 0.05,
+            "amplitude": 0.5,
+            "trials": 4,
+            "discovery_recovery": 4,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 18.0,
+            "beta": 0.05,
+            "amplitude": 1.0,
+            "trials": 4,
+            "discovery_recovery": 4,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 18.0,
+            "beta": 0.05,
+            "amplitude": 2.0,
+            "trials": 4,
+            "discovery_recovery": 4,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "beta": 0.0,
+            "amplitude": 0.5,
+            "trials": 4,
+            "discovery_recovery": 0,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "beta": 0.0,
+            "amplitude": 1.0,
+            "trials": 4,
+            "discovery_recovery": 0,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "beta": 0.0,
+            "amplitude": 2.0,
+            "trials": 4,
+            "discovery_recovery": 0,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "beta": 0.05,
+            "amplitude": 0.5,
+            "trials": 4,
+            "discovery_recovery": 0,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "beta": 0.05,
+            "amplitude": 1.0,
+            "trials": 4,
+            "discovery_recovery": 0,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 2
+          },
+          {
+            "t": 37.58617815882567,
+            "beta": 0.05,
+            "amplitude": 2.0,
+            "trials": 4,
+            "discovery_recovery": 0,
+            "calibration_recovery": 4,
+            "discovery_positive": 0,
+            "calibration_positive": 2
+          }
+        ],
+        "candidate_count": null,
+        "gate_status": "NOT_EVALUATED",
+        "interpretation": "Pre-observation coefficient perturbations are synthetic transfer tests. They preserve no prime law, do not define a null, and do not support a zeta-zero claim. The known-line frequency is intentionally reported only as calibration; discovery excludes its neighborhood. beta is an observation-model stress parameter, not zeta sigma.",
+        "missing_gates": [
+          "prime-consistent injection law",
+          "full surrogate gate",
+          "disjoint external validation",
+          "actual zeta evaluation",
+          "Arb/FLINT certification"
+        ]
+      },
+      "manifest": {
+        "schema": "common-spectrum-v2",
+        "configuration": {
+          "scales": [
+            100000,
+            300000
+          ],
+          "grids": [
+            [
+              192,
+              0.0
+            ],
+            [
+              256,
+              0.08
+            ]
+          ],
+          "splits": [
+            0.55,
+            0.75
+          ],
+          "theta": 0.525,
+          "x_min": 100,
+          "frequencies": [
+            18.0,
+            37.58617815882567
+          ],
+          "betas": [
+            0.0,
+            0.05
+          ],
+          "amplitudes": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "phase_seeds": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "scan_min": 4.0,
+          "scan_max": 40.0,
+          "scan_step": 0.25,
+          "known_margin": 0.35,
+          "top_k": 3,
+          "origin": "log(100)",
+          "scope": "pre-observation coefficient injection; synthetic operator calibration only"
+        },
+        "source_sha256": {
+          "common_spectrum_v2.py": "31d8654f52fc06859b5d4d1f557efd4e1e0b72a3ddc299438d7b8dc55536189f",
+          "common_spectrum_v2_batch_py3.py": "0a1e7057c3533decf666e91de434a8a3a1445e02ac181f1910b63f6155d5c1de",
+          "known_ordinates.py": "6bce49d51f63453c3b55f9e8fd3c7f94568c5e8bc7bba2b7ed0a6c9280137dea",
+          "mertens_dynamics.py": "ddbc40f45493fe4e7326340f3567e6fb5f20dddf86873cc66aca7f148807f4b3",
+          "lambda_psi_dynamics.py": "0a64fd08a0f3dda6ba6b27787e06bc47c2e53661a0beeb62406c748c03667157",
+          "common_spectrum_operator_power_py3.py": "772eb005e5db7c23351df85ad09aab1845bb5e954b9fb7d63ee6337144286607"
+        },
+        "runtime": {
+          "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+          "executable": "C:\\Python314\\python.exe",
+          "numpy": "2.5.3",
+          "scipy": "1.18.1",
+          "mpmath": "1.4.1",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "interpretation": "empirical finite joint prediction screen; no mathematical null, zeta roots or interval certification",
+        "run_id": "998bae4d5f8807350c1555ea58850675f909e915da71063187f15ed2762e8a1a"
+      }
     }
   }
 }

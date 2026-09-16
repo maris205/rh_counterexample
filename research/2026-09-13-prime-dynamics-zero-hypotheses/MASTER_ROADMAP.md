@@ -13,8 +13,13 @@ joint prediction screen: `N=10^6,5*10^6`, grids `(512,0),(768,0.08)`, cuts
 `0.55,0.75`, and 199 replicates for each of three coupled shuffle models.
 All **598/598** artifacts completed, with **0 failures and 0 computed screen
 candidates**. This result applies only to this finite `beta=0` model.
-The full protocol remains **INCOMPLETE**, including observation-operator
-injection calibration, full B/C gates, and growth-envelope validation.
+The first observation-operator injection calibration is now complete: 49/49
+synthetic pre-cumulative perturbation cases finished without failure. The
+unknown `t=18` tone was selected in all 24 discovery cases, but none passed the
+strict all-primary-cell positive-prediction requirement. This is a detector
+sensitivity result, not evidence against the tone model. The full protocol
+remains **INCOMPLETE**, including a prime-consistent injection law, full B/C
+gates, and growth-envelope validation.
 No actual zeta search or Arb/FLINT certification was performed this round.
 
 See [the correction and run ledger](CORRECTION_REPORT_2026-09-16.md),

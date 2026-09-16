@@ -116,6 +116,20 @@ fresh disjoint validation interval remain open. No finite-spectrum row from
 this round is eligible for an actual zeta search. No actual zeta root finding
 or Arb/FLINT interval certification was done.
 
+That route's first calibration is now executed at
+`runs/common-spectrum-operator-power-20260916/`: 49/49 cases, two scales,
+two grids, two cuts, `t=18` as an unknown discovery frequency and
+`t=37.58617815882567` as an explicitly known-line calibration frequency,
+`beta=0,0.05`, amplitudes 0.5/1/2, and four phase designs. Perturbations were
+added to coefficient arrays before cumulative sums and short-window
+transformations. The t=18 tone was selected in 24/24 discovery cases, while
+all-primary-cell positive prediction was 0/24. The known-line calibration was
+selected 24/24; its positive-prediction result was 4/24. This exposes
+attenuation or phase/prediction incompatibility in the present strict gate.
+The synthetic coefficients preserve no prime law and do not justify a null or
+an RH inference. Growth `beta` is a transfer stress parameter, never a fitted
+zeta real part.
+
 ## Runtime and verification
 
 `py -3.10` is unavailable on this host. Actual execution used `py -3.14`,
