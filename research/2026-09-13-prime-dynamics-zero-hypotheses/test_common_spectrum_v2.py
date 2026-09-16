@@ -12,6 +12,7 @@ import stratified_shuffle_controls
 import phase_concordance_audit_py3
 import json
 from common_spectrum_power_py3 import add_tone
+from prime_consistent_power_py3 import weighted_indicator, lambda_from_indicator
 
 
 def synthetic_cells():
@@ -27,6 +28,24 @@ def synthetic_cells():
 
 
 class ScientificTests(unittest.TestCase):
+    def test_prime_consistent_injection_preserves_binary_log_bin_counts(self):
+        indicator, _ = __import__("short_interval_dynamics").prime_indicator_linear_sieve(5000)
+        out = weighted_indicator(indicator, 18., 1., .3, 32, np.random.default_rng(3))
+        self.assertTrue(np.all((out == 0) | (out == 1)))
+        edges = np.unique(np.rint(np.geomspace(2, 5001, 33)).astype(int))
+        for lo, hi in zip(edges[:-1], edges[1:]):
+            self.assertEqual(int(out[lo:hi].sum()), int(indicator[lo:hi].sum()))
+
+    def test_prime_consistent_lambda_rebuilds_prime_powers(self):
+        indicator = np.zeros(40, dtype=np.uint8)
+        indicator[[2, 3, 5]] = 1
+        lam = lambda_from_indicator(indicator)
+        self.assertAlmostEqual(lam[2], np.log(2.))
+        self.assertAlmostEqual(lam[4], np.log(2.))
+        self.assertAlmostEqual(lam[8], np.log(2.))
+        self.assertAlmostEqual(lam[9], np.log(3.))
+        self.assertEqual(lam[6], 0.)
+
     def test_degenerate_signal_is_invalid_not_a_favorable_zero(self):
         u = np.linspace(0, 8, 128)
         with self.assertRaisesRegex(ValueError, "degenerate"):

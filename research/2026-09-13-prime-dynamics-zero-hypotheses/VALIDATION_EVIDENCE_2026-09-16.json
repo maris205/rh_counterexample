@@ -5180,6 +5180,205 @@
         "interpretation": "empirical finite joint prediction screen; no mathematical null, zeta roots or interval certification",
         "run_id": "998bae4d5f8807350c1555ea58850675f909e915da71063187f15ed2762e8a1a"
       }
+    },
+    "prime-consistent-power-20260916": {
+      "raw_summary_sha256": "8e58d909080c4d243834cf76b843919894b8e3a343e4b5bf3ae83925ef12ea74",
+      "summary": {
+        "schema": "prime-consistent-power-v1",
+        "status": "COMPLETED",
+        "run_id": "0d9e1cdf7c545bbabbb1e610b5ec6943b18d13423aa75931d824ddd470d0bc64",
+        "configuration": {
+          "scales": [
+            100000,
+            300000
+          ],
+          "grids": [
+            [
+              192,
+              0.0
+            ],
+            [
+              256,
+              0.08
+            ]
+          ],
+          "splits": [
+            0.55,
+            0.75
+          ],
+          "theta": 0.525,
+          "x_min": 100,
+          "bins": 128,
+          "frequencies": [
+            18.0,
+            37.58617815882567
+          ],
+          "epsilons": [
+            0.25,
+            0.5,
+            1.0,
+            2.0
+          ],
+          "phase_seeds": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "scan_min": 4.0,
+          "scan_max": 40.0,
+          "scan_step": 0.25,
+          "known_margin": 0.35,
+          "top_k": 3,
+          "scope": "binary prime-density preserving local calibration; Mertens held fixed; no full joint gate"
+        },
+        "completed_count": 33,
+        "failed_count": 0,
+        "total_tasks": 33,
+        "curves": [
+          {
+            "t": 18.0,
+            "epsilon": 0.25,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 0,
+            "short_positive": 0
+          },
+          {
+            "t": 18.0,
+            "epsilon": 0.5,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 1,
+            "short_positive": 1
+          },
+          {
+            "t": 18.0,
+            "epsilon": 1.0,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 3,
+            "short_positive": 3
+          },
+          {
+            "t": 18.0,
+            "epsilon": 2.0,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 4,
+            "short_positive": 4
+          },
+          {
+            "t": 37.58617815882567,
+            "epsilon": 0.25,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 0,
+            "short_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "epsilon": 0.5,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 0,
+            "short_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "epsilon": 1.0,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 0,
+            "short_positive": 0
+          },
+          {
+            "t": 37.58617815882567,
+            "epsilon": 2.0,
+            "trials": 4,
+            "joint_recovery": 0,
+            "joint_positive": 0,
+            "short_recovery": 0,
+            "short_positive": 0
+          }
+        ],
+        "candidate_count": null,
+        "gate_status": "NOT_EVALUATED",
+        "interpretation": "Synthetic indicators remain binary and preserve per-log-bin prime counts; lambda/psi is regenerated from them. Mertens is held fixed, so this is a local-prime/global-psi calibration rather than a three-family joint test. It is not a prime probability model, zeta candidate, or interval certificate."
+      },
+      "manifest": {
+        "schema": "common-spectrum-v2",
+        "configuration": {
+          "scales": [
+            100000,
+            300000
+          ],
+          "grids": [
+            [
+              192,
+              0.0
+            ],
+            [
+              256,
+              0.08
+            ]
+          ],
+          "splits": [
+            0.55,
+            0.75
+          ],
+          "theta": 0.525,
+          "x_min": 100,
+          "bins": 128,
+          "frequencies": [
+            18.0,
+            37.58617815882567
+          ],
+          "epsilons": [
+            0.25,
+            0.5,
+            1.0,
+            2.0
+          ],
+          "phase_seeds": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "scan_min": 4.0,
+          "scan_max": 40.0,
+          "scan_step": 0.25,
+          "known_margin": 0.35,
+          "top_k": 3,
+          "scope": "binary prime-density preserving local calibration; Mertens held fixed; no full joint gate"
+        },
+        "source_sha256": {
+          "common_spectrum_v2.py": "31d8654f52fc06859b5d4d1f557efd4e1e0b72a3ddc299438d7b8dc55536189f",
+          "common_spectrum_v2_batch_py3.py": "0a1e7057c3533decf666e91de434a8a3a1445e02ac181f1910b63f6155d5c1de",
+          "known_ordinates.py": "6bce49d51f63453c3b55f9e8fd3c7f94568c5e8bc7bba2b7ed0a6c9280137dea",
+          "mertens_dynamics.py": "ddbc40f45493fe4e7326340f3567e6fb5f20dddf86873cc66aca7f148807f4b3",
+          "lambda_psi_dynamics.py": "0a64fd08a0f3dda6ba6b27787e06bc47c2e53661a0beeb62406c748c03667157",
+          "prime_consistent_power_py3.py": "0df39fbfee82b4c85e7369fabd66c7154ee7c2745cd4a732f5b43a6b7f3a183f"
+        },
+        "runtime": {
+          "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+          "executable": "C:\\Python314\\python.exe",
+          "numpy": "2.5.3",
+          "scipy": "1.18.1",
+          "mpmath": "1.4.1",
+          "platform": "Windows-11-10.0.26200-SP0"
+        },
+        "interpretation": "empirical finite joint prediction screen; no mathematical null, zeta roots or interval certification",
+        "run_id": "0d9e1cdf7c545bbabbb1e610b5ec6943b18d13423aa75931d824ddd470d0bc64"
+      }
     }
   }
 }

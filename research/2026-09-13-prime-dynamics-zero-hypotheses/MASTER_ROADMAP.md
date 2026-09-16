@@ -22,6 +22,14 @@ remains **INCOMPLETE**, including a prime-consistent injection law, full B/C
 gates, and growth-envelope validation.
 No actual zeta search or Arb/FLINT certification was performed this round.
 
+A second local-structure calibration completed 33/33 cases in
+`runs/prime-consistent-power-20260916/`. It keeps the indicator binary and
+preserves prime counts in 128 log bins, then regenerates Lambda/psi from the
+synthetic prime set. For `t=18`, short-only frozen prediction recovered 0/4,
+1/4, 3/4, and 4/4 phase trials at modulation strengths 0.25, 0.5, 1, and 2;
+the joint screen recovered 0/16 because Mertens was deliberately held fixed.
+This measures local-prime transfer only and is not a full three-family gate.
+
 See [the correction and run ledger](CORRECTION_REPORT_2026-09-16.md),
 [the prospective protocol](COMMON_SPECTRUM_PROTOCOL_V2.md), and
 [the corrected theory note](PHASE_A_THEORY_NOTE.md). Earlier dated entries are

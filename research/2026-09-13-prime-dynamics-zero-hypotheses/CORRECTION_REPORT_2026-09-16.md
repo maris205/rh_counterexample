@@ -130,6 +130,16 @@ The synthetic coefficients preserve no prime law and do not justify a null or
 an RH inference. Growth `beta` is a transfer stress parameter, never a fitted
 zeta real part.
 
+A complementary prime-structure calibration is stored at
+`runs/prime-consistent-power-20260916/` (33/33 completed). It preserves a
+binary prime indicator and the prime count in every one of 128 log bins, then
+rebuilds Lambda/psi from the synthetic prime set. At `t=18`, short-only frozen
+prediction recovered 0/4, 1/4, 3/4 and 4/4 phase trials for modulation
+strengths 0.25, 0.5, 1 and 2; the joint score recovered 0/16 because Mertens
+was held fixed. The known-line calibration was discovery-excluded. This is a
+local prime-operator diagnostic, not an arithmetic null or a three-family
+candidate procedure.
+
 ## Runtime and verification
 
 `py -3.10` is unavailable on this host. Actual execution used `py -3.14`,
@@ -140,7 +150,7 @@ reversal, selection leakage, window support, finite controls, inclusive
 endpoints, phase grouping, domain-preserving shuffles, manifest mismatch,
 failure accounting and resume. Tests intentionally inject failures; their
 temporary failed-task lines are not failures of the scientific batches.
-All 23 targeted regression tests and Python 3 syntax compilation passed.
+All 25 targeted regression tests and Python 3 syntax compilation passed.
 
 ## Preserved historical evidence
 
