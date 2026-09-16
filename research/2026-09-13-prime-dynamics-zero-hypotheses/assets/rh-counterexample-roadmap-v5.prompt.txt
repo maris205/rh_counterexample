@@ -1,0 +1,17 @@
+Edit the supplied numbered Chinese roadmap image by extending the canvas DOWNWARD and APPENDING a separate status-legend band BELOW the existing entire roadmap. Intended final canvas roughly 1536 wide by 1280 high (a little taller than the original); use adequate resolution. Preserve the whole original diagram in the upper approximately 1024 pixels, including the THREE equally sized outcome cards D1, D2, D3, the complete text “D3 提出下一步问题”, its subtitle “缺失机制 · 新假设 · 后续检验”, the D1→E1→E2 certification path, all arrows, all 13 IDs and all other labels, title, illustrations and colors. Do NOT compress any original card to make room. Do NOT put the new legend beside the D1/D2/D3 row. Do NOT crop the original D3 title or any label.
+
+This is a strictly additive edit to the original layout: create more ivory canvas below its bottom footer, then add a FULL-WIDTH, compact, elegantly separated legend in that new space. No connector or arrow may point toward the legend: it is a key, not a fourth outcome or a workflow step.
+
+New bottom legend in exactly three clean lines, plus one example line:
+1. Heading: “研究状态｜按线索标注”
+2. Four horizontal pills, well spaced, all readable and color paired with text:
+“GO 继续推进” in restrained teal
+“HOLD 待证暂停” in restrained amber
+“FORK 新建分支” in restrained purple
+“END 结束归档” in gray
+3. Plain text: “状态不是结论等级；总结论文记录：编号＋状态＋证据＋下一步”
+4. Small readable example: “格式示例：A2 / CL-示例 / C1 / HOLD”
+The example is hypothetical. Do not put actual workflow status badges on any original research node. These are status definitions for future reports.
+
+Keep the original footer “异常 ≠ 反例     未找到 ≠ 已排除” and “探索蓝图 · 尚未发现反例” between the original diagram and the appended legend; separate the new legend with a quiet thin horizontal rule. Preserve high-contrast navy typography and a flat warm ivory background. No dark gradients, no glows, no extra mathematical claims, no new node IDs, no completion checkmarks, no new arrows.
+Critical invariants: A1 A2 A3 A4 B1 C1 C2 C3 D1 D2 D3 E1 E2 all visible and unchanged; D3 full heading intact; THREE outcome cards remain equal-width; no scientific arrow connects to the status legend; E1 only advances to E2 on “通过”.

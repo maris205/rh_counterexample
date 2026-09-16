@@ -18,6 +18,14 @@ and confirmation. Use the prefix `RC:` when ambiguity is possible. These are
 not the manuscript's Hilbert–Pólya gates or historical Phase A/B/C labels.
 Track each clue's direction, current location, status, evidence, and next test
 separately; a location ID does not assert that its validation has passed.
+Research dispositions are GO (continue), HOLD (pause pending specified evidence
+or dependency), FORK (new object/branch), and END (close and archive this round).
+They are unordered, separate from execution status and mathematical evidence
+level, and scoped to a clue, node, and dated source version. Unassessed records
+remain unmarked. Future summary papers use the
+[research-entry template](RESEARCH_SUMMARY_TEMPLATE.md) to attach IDs, disposition,
+evidence, limits, and the next test. This annotation update does not retrospectively
+assign statuses to historical runs or start new research work.
 Discovery precedes replication, controls, artifact diagnosis, targeted follow-up,
 and eventual certification. An initial clue may be local, single-channel, or
 model-based: record its source, baseline, effect, and proposed discriminating
