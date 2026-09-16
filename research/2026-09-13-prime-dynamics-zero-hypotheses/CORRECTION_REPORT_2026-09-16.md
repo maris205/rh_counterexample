@@ -39,6 +39,7 @@ repository root; on this host the root is
 | `short-interval-phaseB-v2-validation-20260916` | 0 / 4 | 4 | Failed initial expanded B run; preserved |
 | `short-interval-phaseB-v2-validation-r2-20260916` | 4 / 4 | 0 | Corrected B controls; NOT_EVALUATED joint gate |
 | `family-phaseC-v2-smoke` | 4 / 4 | 0 | NOT_EVALUATED |
+| `common-spectrum-v2-disjoint-20260916` | 58 / 58 | 0 | EVALUATED; 0 finite screen candidates |
 
 The initial expanded B run exposed `p=1` in shuffled prime positions and
 nonfinite gap metrics. Its four failed JSONs remain in the original directory.
@@ -68,6 +69,15 @@ purged. The score is the minimum predictive SSE improvement across Mertens,
 global psi, local short-psi and every scale/grid/cut. Prime count is an
 additional correlated diagnostic. Each surrogate repeats selection and takes
 the maximum of its nominated scores before ranking the observed score.
+
+The disjoint run used `N=10,000,000,30,000,000`, `x_min=6,000,000`,
+192/256 samples, trims 0/0.08, cuts 0.55/0.75, and 19 replicates per
+control. Its selected frequencies had minimum held-out gains -110.009,
+-103.523 and -123.630, and its computed candidate count was 0. This run was
+chosen after inspecting the first production result, so it is a post-hoc
+robustness check rather than a blind replication. Its manifest records the
+runner source hash; the preceding production artifacts correspond to the
+earlier pushed source commit `d884261`.
 
 | Nominated t | Minimum held-out improvement | Global rank | Block rank | Density rank |
 | ---: | ---: | ---: | ---: | ---: |

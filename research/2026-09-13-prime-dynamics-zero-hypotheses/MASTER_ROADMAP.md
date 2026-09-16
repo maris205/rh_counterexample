@@ -30,6 +30,14 @@ synthetic prime set. For `t=18`, short-only frozen prediction recovered 0/4,
 the joint screen recovered 0/16 because Mertens was deliberately held fixed.
 This measures local-prime transfer only and is not a full three-family gate.
 
+The post-hoc disjoint-interval joint check completed 58/58 tasks with 19
+replicates per control and 0 failures in
+`runs/common-spectrum-v2-disjoint-20260916/`. It used `N=10^7,3*10^7` and
+`x_min=6*10^6`, above the previous run's observed range. The gate was
+evaluated and returned 0 finite screen candidates; the three selected
+frequencies had minimum held-out gains `-110.009`, `-103.523`, and `-123.630`.
+This is a post-hoc robustness check, not a blind external replication.
+
 See [the correction and run ledger](CORRECTION_REPORT_2026-09-16.md),
 [the prospective protocol](COMMON_SPECTRUM_PROTOCOL_V2.md), and
 [the corrected theory note](PHASE_A_THEORY_NOTE.md). Earlier dated entries are
