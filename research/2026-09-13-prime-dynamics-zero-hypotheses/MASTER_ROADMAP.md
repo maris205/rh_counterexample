@@ -38,6 +38,15 @@ evaluated and returned 0 finite screen candidates; the three selected
 frequencies had minimum held-out gains `-110.009`, `-103.523`, and `-123.630`.
 This is a post-hoc robustness check, not a blind external replication.
 
+The B joint unknown-frequency run completed 58/58 tasks with 0 failures in
+`runs/phaseB-joint-20260916/`. It required the same shared frequency to pass
+Mertens, global psi and short-psi across theta values 0.50/0.525/0.60; gap
+was recorded as a correlated diagnostic only. The gate was evaluated with 19
+replicates per control and returned 0 candidates. Its selected minima were
+`-0.420831`, `-0.727910`, and `-0.299932`; the full protocol remains
+INCOMPLETE because Phase C and prime-consistent three-family injection gates
+are still open.
+
 See [the correction and run ledger](CORRECTION_REPORT_2026-09-16.md),
 [the prospective protocol](COMMON_SPECTRUM_PROTOCOL_V2.md), and
 [the corrected theory note](PHASE_A_THEORY_NOTE.md). Earlier dated entries are

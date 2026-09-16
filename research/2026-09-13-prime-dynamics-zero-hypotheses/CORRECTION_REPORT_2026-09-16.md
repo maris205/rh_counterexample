@@ -40,6 +40,7 @@ repository root; on this host the root is
 | `short-interval-phaseB-v2-validation-r2-20260916` | 4 / 4 | 0 | Corrected B controls; NOT_EVALUATED joint gate |
 | `family-phaseC-v2-smoke` | 4 / 4 | 0 | NOT_EVALUATED |
 | `common-spectrum-v2-disjoint-20260916` | 58 / 58 | 0 | EVALUATED; 0 finite screen candidates |
+| `phaseB-joint-20260916` | 58 / 58 | 0 | EVALUATED; 0 finite screen candidates |
 
 The initial expanded B run exposed `p=1` in shuffled prime positions and
 nonfinite gap metrics. Its four failed JSONs remain in the original directory.
@@ -78,6 +79,14 @@ chosen after inspecting the first production result, so it is a post-hoc
 robustness check rather than a blind replication. Its manifest records the
 runner source hash; the preceding production artifacts correspond to the
 earlier pushed source commit `d884261`.
+
+The B joint run at `runs/phaseB-joint-20260916/` pooled no independent votes:
+it required Mertens, global psi and short-psi to pass at all three powers
+theta=0.50/0.525/0.60, while retaining gap only as a correlated diagnostic.
+All 58 tasks completed with 19 replicates per control and candidate count 0.
+Its selected minima were -0.420831, -0.727910 and -0.299932. This closes a
+finite B robustness check but does not complete the Phase C gate or authorize
+a zeta handoff.
 
 | Nominated t | Minimum held-out improvement | Global rank | Block rank | Density rank |
 | ---: | ---: | ---: | ---: | ---: |
